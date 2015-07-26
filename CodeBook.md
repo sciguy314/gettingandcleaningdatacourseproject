@@ -1259,12 +1259,10 @@ angleZ.gravityMean
 
 These are the columns within the final data set **tidyData**. The prefix "avg." was affixed to those columns that were selected from the original data since these columns now contain averages of the original data by subject and activity.  
 
-subject    
+subject --   
    Participant identifier, 1...30  
-activity    
+activity --   
    Type of activity, factor with six levels, see activity_labels.txt
-subject
-activity
 avg.tBodyAcc.mean.X
 avg.tBodyAcc.mean.Y
 avg.tBodyAcc.mean.Z
