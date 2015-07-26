@@ -6,7 +6,7 @@ The **features.txt** file was read and the result was a data frame (**features**
 
 The **activity_labels.txt** file was read into the data frame **activities**.
 
-The testing and training data were acquired in separate operations. First, subject and activity information was for the type of activity was read into separate data frames (**test_subjects** and **test_activity**). Then the data was read. The three data frames one were then combined using cbind. At this time a new column, **type**, was also introduced to distinguish between "test" and "train" sets when all the data was eventually combined. Column names were added using the **features** data frame as the column names. This resulted in the data frame **test_complete**.The process was repeated for the training data.
+The testing and training data were acquired in separate operations. First, subject and activity information for the type of activity was read into separate data frames (**test_subjects** and **test_activity**). Then the data was read. The three data frames one were then combined using cbind. At this time a new column, **type**, was also introduced to distinguish between "test" and "train" sets when all the data was eventually combined. Column names were added using the **features** data frame as the column names. This resulted in the data frame **test_complete**.The process was repeated for the training data.
 
 rbind was then used to combine the test and training data into one dataset, **completeData**.
 
