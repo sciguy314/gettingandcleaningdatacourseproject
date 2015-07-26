@@ -50,11 +50,10 @@ The following description of the orginal data is taken from the README.txt file 
 > 
 > - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-### NOTE: Since the data was normalized it has no units!
 
 ## Variables
 
-### Original Data
+### Original Data Code Book
 
 The following comes from the features.txt document distributed with the original data and describes how the data was collected and labeled in the data set.
 
@@ -118,582 +117,1241 @@ The following comes from the features.txt document distributed with the original
 >The complete list of variables of each feature vector is available in 'features.txt'
 
 
-### Column Names in **completeData**
+### Original Data CodeBook
 
-These variable names were edited within run_analysis.R to standardize their appearance. The following changes were made
+**NOTE: Since the data was normalized it has no units!**
+
+These columns names were obtained from the **features.txt** file and are associated with the original data. The column names were edited within run_analysis.R to standardize their appearance. The following changes were made
 
 * "()" were removed
 * "-" were replaced with "."
 
-  This resulted in the following variables  
-   Column Name              |       Description of Contents  
-----------------------------|-------------------------------------  
-1 subject                   | Study participant identifier, 1...30  
-2 activity                  | Type of activity, factor, 6 levels, see   
-3 type                      | "Train" or "Test"  
-4 tBodyAcc.mean.X   | Time domain body acceleration mean in X axis  
-5 tBodyAcc.mean.Y   | Time domain body acceleration  
-6 tBodyAcc.mean.Z   | Time domain body acceleration  
-7 tBodyAcc.std.X    | Time domain body acceleration  
-8 tBodyAcc.std.Y    | Time domain body acceleration  
-9 tBodyAcc.std.Z    | Time domain body acceleration  
-10 tBodyAcc.mad.X   | Time domain body acceleration  
-11 tBodyAcc.mad.Y   | Time domain body acceleration  
-12 tBodyAcc.mad.Z   | Time domain body acceleration  
-13 tBodyAcc.max.X   | Time domain body acceleration  
-14 tBodyAcc.max.Y   | Time domain body acceleration  
-15 tBodyAcc.max.Z   | Time domain body acceleration  
-16 tBodyAcc.min.X   | Time domain body acceleration  
-17 tBodyAcc.min.Y   | Time domain body acceleration  
-18 tBodyAcc.min.Z   | Time domain body acceleration  
-19 tBodyAcc.sma | Time domain body acceleration  
-20 tBodyAcc.energy.X    | Time domain body acceleration  
-21 tBodyAcc.energy.Y    | Time domain body acceleration  
-22 tBodyAcc.energy.Z    | Time domain body acceleration  
-23 tBodyAcc.iqr.X   | Time domain body acceleration  
-24 tBodyAcc.iqr.Y   | Time domain body acceleration  
-25 tBodyAcc.iqr.Z   | Time domain body acceleration  
-26 tBodyAcc.entropy.X   | Time domain body acceleration  
-27 tBodyAcc.entropy.Y   | Time domain body acceleration  
-28 tBodyAcc.entropy.Z   | Time domain body acceleration  
-29 tBodyAcc.arCoeff.X.1 | Time domain body acceleration  
-30 tBodyAcc.arCoeff.X.2 | Time domain body acceleration  
-31 tBodyAcc.arCoeff.X.3 | Time domain body acceleration  
-32 tBodyAcc.arCoeff.X.4 | Time domain body acceleration  
-33 tBodyAcc.arCoeff.Y.1 | Time domain body acceleration  
-34 tBodyAcc.arCoeff.Y.2 | Time domain body acceleration  
-35 tBodyAcc.arCoeff.Y.3 | Time domain body acceleration  
-36 tBodyAcc.arCoeff.Y.4 | Time domain body acceleration  
-37 tBodyAcc.arCoeff.Z.1 | Time domain body acceleration  
-38 tBodyAcc.arCoeff.Z.2 | Time domain body acceleration  
-39 tBodyAcc.arCoeff.Z.3 | Time domain body acceleration  
-40 tBodyAcc.arCoeff.Z.4 | Time domain body acceleration  
-41 tBodyAcc.correlation.X.Y | Time domain body acceleration  
-42 tBodyAcc.correlation.X.Z | Time domain body acceleration  
-43 tBodyAcc.correlation.Y.Z | Time domain body acceleration  
-44 tGravityAcc.mean.X   | Time domain acceleration due to gravity  
-45 tGravityAcc.mean.Y   | Time domain acceleration due to gravity  
-46 tGravityAcc.mean.Z   | Time domain acceleration due to gravity  
-47 tGravityAcc.std.X    | Time domain acceleration due to gravity  
-48 tGravityAcc.std.Y    | Time domain acceleration due to gravity  
-49 tGravityAcc.std.Z    | Time domain acceleration due to gravity  
-50 tGravityAcc.mad.X    | Time domain acceleration due to gravity  
-51 tGravityAcc.mad.Y    | Time domain acceleration due to gravity  
-52 tGravityAcc.mad.Z    | Time domain acceleration due to gravity  
-53 tGravityAcc.max.X    | Time domain acceleration due to gravity  
-54 tGravityAcc.max.Y    | Time domain acceleration due to gravity  
-55 tGravityAcc.max.Z    | Time domain acceleration due to gravity  
-56 tGravityAcc.min.X    | Time domain acceleration due to gravity  
-57 tGravityAcc.min.Y    | Time domain acceleration due to gravity  
-58 tGravityAcc.min.Z    | Time domain acceleration due to gravity  
-59 tGravityAcc.sma  | Time domain acceleration due to gravity  
-60 tGravityAcc.energy.X | Time domain acceleration due to gravity  
-61 tGravityAcc.energy.Y | Time domain acceleration due to gravity  
-62 tGravityAcc.energy.Z | Time domain acceleration due to gravity  
-63 tGravityAcc.iqr.X    | Time domain acceleration due to gravity  
-64 tGravityAcc.iqr.Y    | Time domain acceleration due to gravity  
-65 tGravityAcc.iqr.Z    | Time domain acceleration due to gravity  
-66 tGravityAcc.entropy.X    | Time domain acceleration due to gravity  
-67 tGravityAcc.entropy.Y    | Time domain acceleration due to gravity  
-68 tGravityAcc.entropy.Z    | Time domain acceleration due to gravity  
-69 tGravityAcc.arCoeff.X.1  | Time domain acceleration due to gravity  
-70 tGravityAcc.arCoeff.X.2  | Time domain acceleration due to gravity  
-71 tGravityAcc.arCoeff.X.3  | Time domain acceleration due to gravity  
-72 tGravityAcc.arCoeff.X.4  | Time domain acceleration due to gravity  
-73 tGravityAcc.arCoeff.Y.1  | Time domain acceleration due to gravity  
-74 tGravityAcc.arCoeff.Y.2  | Time domain acceleration due to gravity  
-75 tGravityAcc.arCoeff.Y.3  | Time domain acceleration due to gravity  
-76 tGravityAcc.arCoeff.Y.4  | Time domain acceleration due to gravity  
-77 tGravityAcc.arCoeff.Z.1  | Time domain acceleration due to gravity  
-78 tGravityAcc.arCoeff.Z.2  | Time domain acceleration due to gravity  
-79 tGravityAcc.arCoeff.Z.3  | Time domain acceleration due to gravity  
-80 tGravityAcc.arCoeff.Z.4  | Time domain acceleration due to gravity  
-81 tGravityAcc.correlation.X.Y  | Time domain acceleration due to gravity  
-82 tGravityAcc.correlation.X.Z  | Time domain acceleration due to gravity  
-83 tGravityAcc.correlation.Y.Z  | Time domain acceleration due to gravity  
-84 tBodyAccJerk.mean.X  | Time domain body jerk  
-85 tBodyAccJerk.mean.Y  | Time domain body jerk  
-86 tBodyAccJerk.mean.Z  | Time domain body jerk  
-87 tBodyAccJerk.std.X   | Time domain body jerk  
-88 tBodyAccJerk.std.Y   | Time domain body jerk  
-89 tBodyAccJerk.std.Z   | Time domain body jerk  
-90 tBodyAccJerk.mad.X   | Time domain body jerk  
-91 tBodyAccJerk.mad.Y   | Time domain body jerk  
-92 tBodyAccJerk.mad.Z   | Time domain body jerk  
-93 tBodyAccJerk.max.X   | Time domain body jerk  
-94 tBodyAccJerk.max.Y   | Time domain body jerk  
-95 tBodyAccJerk.max.Z   | Time domain body jerk  
-96 tBodyAccJerk.min.X   | Time domain body jerk  
-97 tBodyAccJerk.min.Y   | Time domain body jerk  
-98 tBodyAccJerk.min.Z   | Time domain body jerk  
-99 tBodyAccJerk.sma | Time domain body jerk  
-100 tBodyAccJerk.energy.X   | Time domain body jerk  
-101 tBodyAccJerk.energy.Y   | Time domain body jerk  
-102 tBodyAccJerk.energy.Z   | Time domain body jerk  
-103 tBodyAccJerk.iqr.X  | Time domain body jerk  
-104 tBodyAccJerk.iqr.Y  | Time domain body jerk  
-105 tBodyAccJerk.iqr.Z  | Time domain body jerk  
-106 tBodyAccJerk.entropy.X  | Time domain body jerk  
-107 tBodyAccJerk.entropy.Y  | Time domain body jerk  
-108 tBodyAccJerk.entropy.Z  | Time domain body jerk  
-109 tBodyAccJerk.arCoeff.X.1    | Time domain body jerk  
-110 tBodyAccJerk.arCoeff.X.2    | Time domain body jerk  
-111 tBodyAccJerk.arCoeff.X.3    | Time domain body jerk  
-112 tBodyAccJerk.arCoeff.X.4    | Time domain body jerk  
-113 tBodyAccJerk.arCoeff.Y.1    | Time domain body jerk  
-114 tBodyAccJerk.arCoeff.Y.2    | Time domain body jerk  
-115 tBodyAccJerk.arCoeff.Y.3    | Time domain body jerk  
-116 tBodyAccJerk.arCoeff.Y.4    | Time domain body jerk  
-117 tBodyAccJerk.arCoeff.Z.1    | Time domain body jerk  
-118 tBodyAccJerk.arCoeff.Z.2    | Time domain body jerk  
-119 tBodyAccJerk.arCoeff.Z.3    | Time domain body jerk  
-120 tBodyAccJerk.arCoeff.Z.4    | Time domain body jerk  
-121 tBodyAccJerk.correlation.X.Y    | Time domain body jerk  
-122 tBodyAccJerk.correlation.X.Z    | Time domain body jerk  
-123 tBodyAccJerk.correlation.Y.Z    | Time domain body jerk  
-124 tBodyGyro.mean.X    | Time domain body gyroscopic jerk  
-125 tBodyGyro.mean.Y    | Time domain body gyroscopic jerk  
-126 tBodyGyro.mean.Z    | Time domain body gyroscopic jerk  
-127 tBodyGyro.std.X | Time domain body gyroscopic jerk  
-128 tBodyGyro.std.Y | Time domain body gyroscopic jerk  
-129 tBodyGyro.std.Z | Time domain body gyroscopic jerk  
-130 tBodyGyro.mad.X | Time domain body gyroscopic jerk  
-131 tBodyGyro.mad.Y | Time domain body gyroscopic jerk  
-132 tBodyGyro.mad.Z | Time domain body gyroscopic jerk  
-133 tBodyGyro.max.X | Time domain body gyroscopic jerk  
-134 tBodyGyro.max.Y | Time domain body gyroscopic jerk  
-135 tBodyGyro.max.Z | Time domain body gyroscopic jerk  
-136 tBodyGyro.min.X | Time domain body gyroscopic jerk  
-137 tBodyGyro.min.Y | Time domain body gyroscopic jerk  
-138 tBodyGyro.min.Z | Time domain body gyroscopic jerk  
-139 tBodyGyro.sma   | Time domain body gyroscopic jerk  
-140 tBodyGyro.energy.X  | Time domain body gyroscopic jerk  
-141 tBodyGyro.energy.Y  | Time domain body gyroscopic jerk  
-142 tBodyGyro.energy.Z  | Time domain body gyroscopic jerk  
-143 tBodyGyro.iqr.X | Time domain body gyroscopic jerk  
-144 tBodyGyro.iqr.Y | Time domain body gyroscopic jerk  
-145 tBodyGyro.iqr.Z | Time domain body gyroscopic jerk  
-146 tBodyGyro.entropy.X | Time domain body gyroscopic jerk  
-147 tBodyGyro.entropy.Y | Time domain body gyroscopic jerk  
-148 tBodyGyro.entropy.Z | Time domain body gyroscopic jerk  
-149 tBodyGyro.arCoeff.X.1   | Time domain body gyroscopic jerk  
-150 tBodyGyro.arCoeff.X.2   | Time domain body gyroscopic jerk  
-151 tBodyGyro.arCoeff.X.3   | Time domain body gyroscopic jerk  
-152 tBodyGyro.arCoeff.X.4   | Time domain body gyroscopic jerk  
-153 tBodyGyro.arCoeff.Y.1   | Time domain body gyroscopic jerk  
-154 tBodyGyro.arCoeff.Y.2   | Time domain body gyroscopic jerk  
-155 tBodyGyro.arCoeff.Y.3   | Time domain body gyroscopic jerk  
-156 tBodyGyro.arCoeff.Y.4   | Time domain body gyroscopic jerk  
-157 tBodyGyro.arCoeff.Z.1   | Time domain body gyroscopic jerk  
-158 tBodyGyro.arCoeff.Z.2   | Time domain body gyroscopic jerk  
-159 tBodyGyro.arCoeff.Z.3   | Time domain body gyroscopic jerk  
-160 tBodyGyro.arCoeff.Z.4   | Time domain body gyroscopic jerk  
-161 tBodyGyro.correlation.X.Y   | Time domain body gyroscopic jerk  
-162 tBodyGyro.correlation.X.Z   | Time domain body gyroscopic jerk  
-163 tBodyGyro.correlation.Y.Z   | Time domain body gyroscopic jerk  
-164 tBodyGyroJerk.mean.X    | Time domain body gyroscopic jerk  
-165 tBodyGyroJerk.mean.Y    | Time domain body gyroscopic jerk  
-166 tBodyGyroJerk.mean.Z    | Time domain body gyroscopic jerk  
-167 tBodyGyroJerk.std.X | Time domain body gyroscopic jerk  
-168 tBodyGyroJerk.std.Y | Time domain body gyroscopic jerk  
-169 tBodyGyroJerk.std.Z | Time domain body gyroscopic jerk  
-170 tBodyGyroJerk.mad.X | Time domain body gyroscopic jerk  
-171 tBodyGyroJerk.mad.Y | Time domain body gyroscopic jerk  
-172 tBodyGyroJerk.mad.Z | Time domain body gyroscopic jerk  
-173 tBodyGyroJerk.max.X | Time domain body gyroscopic jerk  
-174 tBodyGyroJerk.max.Y | Time domain body gyroscopic jerk  
-175 tBodyGyroJerk.max.Z | Time domain body gyroscopic jerk  
-176 tBodyGyroJerk.min.X | Time domain body gyroscopic jerk  
-177 tBodyGyroJerk.min.Y | Time domain body gyroscopic jerk  
-178 tBodyGyroJerk.min.Z | Time domain body gyroscopic jerk  
-179 tBodyGyroJerk.sma   | Time domain body gyroscopic jerk  
-180 tBodyGyroJerk.energy.X  |   
-181 tBodyGyroJerk.energy.Y  |   
-182 tBodyGyroJerk.energy.Z  |   
-183 tBodyGyroJerk.iqr.X |   
-184 tBodyGyroJerk.iqr.Y |   
-185 tBodyGyroJerk.iqr.Z |   
-186 tBodyGyroJerk.entropy.X |   
-187 tBodyGyroJerk.entropy.Y |   
-188 tBodyGyroJerk.entropy.Z |   
-189 tBodyGyroJerk.arCoeff.X.1   |   
-190 tBodyGyroJerk.arCoeff.X.2   |   
-191 tBodyGyroJerk.arCoeff.X.3   |   
-192 tBodyGyroJerk.arCoeff.X.4   |   
-193 tBodyGyroJerk.arCoeff.Y.1   |   
-194 tBodyGyroJerk.arCoeff.Y.2   |   
-195 tBodyGyroJerk.arCoeff.Y.3   |   
-196 tBodyGyroJerk.arCoeff.Y.4   |   
-197 tBodyGyroJerk.arCoeff.Z.1   |   
-198 tBodyGyroJerk.arCoeff.Z.2   |   
-199 tBodyGyroJerk.arCoeff.Z.3   |   
-200 tBodyGyroJerk.arCoeff.Z.4   |   
-201 tBodyGyroJerk.correlation.X.Y   |   
-202 tBodyGyroJerk.correlation.X.Z   |   
-203 tBodyGyroJerk.correlation.Y.Z   |   
-204 tBodyAccMag.mean    |   
-205 tBodyAccMag.std |   
-206 tBodyAccMag.mad |   
-207 tBodyAccMag.max |   
-208 tBodyAccMag.min |   
-209 tBodyAccMag.sma |   
-210 tBodyAccMag.energy  |   
-211 tBodyAccMag.iqr |   
-212 tBodyAccMag.entropy |   
-213 tBodyAccMag.arCoeff1    |   
-214 tBodyAccMag.arCoeff2    |   
-215 tBodyAccMag.arCoeff3    |   
-216 tBodyAccMag.arCoeff4    |   
-217 tGravityAccMag.mean |   
-218 tGravityAccMag.std  |   
-219 tGravityAccMag.mad  |   
-220 tGravityAccMag.max  |   
-221 tGravityAccMag.min  |   
-222 tGravityAccMag.sma  |   
-223 tGravityAccMag.energy   |   
-224 tGravityAccMag.iqr  |   
-225 tGravityAccMag.entropy  |   
-226 tGravityAccMag.arCoeff1 |   
-227 tGravityAccMag.arCoeff2 |   
-228 tGravityAccMag.arCoeff3 |   
-229 tGravityAccMag.arCoeff4 |   
-230 tBodyAccJerkMag.mean    |   
-231 tBodyAccJerkMag.std |   
-232 tBodyAccJerkMag.mad |   
-233 tBodyAccJerkMag.max |   
-234 tBodyAccJerkMag.min |   
-235 tBodyAccJerkMag.sma |   
-236 tBodyAccJerkMag.energy  |   
-237 tBodyAccJerkMag.iqr |   
-238 tBodyAccJerkMag.entropy |   
-239 tBodyAccJerkMag.arCoeff1    |   
-240 tBodyAccJerkMag.arCoeff2    |   
-241 tBodyAccJerkMag.arCoeff3    |   
-242 tBodyAccJerkMag.arCoeff4    |   
-243 tBodyGyroMag.mean   |   
-244 tBodyGyroMag.std    |   
-245 tBodyGyroMag.mad    |   
-246 tBodyGyroMag.max    |   
-247 tBodyGyroMag.min    |   
-248 tBodyGyroMag.sma    |   
-249 tBodyGyroMag.energy |   
-250 tBodyGyroMag.iqr    |   
-251 tBodyGyroMag.entropy    |   
-252 tBodyGyroMag.arCoeff1   |   
-253 tBodyGyroMag.arCoeff2   |   
-254 tBodyGyroMag.arCoeff3   |   
-255 tBodyGyroMag.arCoeff4   |   
-256 tBodyGyroJerkMag.mean   |   
-257 tBodyGyroJerkMag.std    |   
-258 tBodyGyroJerkMag.mad    |   
-259 tBodyGyroJerkMag.max    |   
-260 tBodyGyroJerkMag.min    |   
-261 tBodyGyroJerkMag.sma    |   
-262 tBodyGyroJerkMag.energy |   
-263 tBodyGyroJerkMag.iqr    |   
-264 tBodyGyroJerkMag.entropy    |   
-265 tBodyGyroJerkMag.arCoeff1   |   
-266 tBodyGyroJerkMag.arCoeff2   |   
-267 tBodyGyroJerkMag.arCoeff3   |   
-268 tBodyGyroJerkMag.arCoeff4   |   
-269 fBodyAcc.mean.X |   
-270 fBodyAcc.mean.Y |   
-271 fBodyAcc.mean.Z |   
-272 fBodyAcc.std.X  |   
-273 fBodyAcc.std.Y  |   
-274 fBodyAcc.std.Z  |   
-275 fBodyAcc.mad.X  |   
-276 fBodyAcc.mad.Y  |   
-277 fBodyAcc.mad.Z  |   
-278 fBodyAcc.max.X  |   
-279 fBodyAcc.max.Y  |   
-280 fBodyAcc.max.Z  |   
-281 fBodyAcc.min.X  |   
-282 fBodyAcc.min.Y  |   
-283 fBodyAcc.min.Z  |   
-284 fBodyAcc.sma    |   
-285 fBodyAcc.energy.X   |   
-286 fBodyAcc.energy.Y   |   
-287 fBodyAcc.energy.Z   |   
-288 fBodyAcc.iqr.X  |   
-289 fBodyAcc.iqr.Y  |   
-290 fBodyAcc.iqr.Z  |   
-291 fBodyAcc.entropy.X  |   
-292 fBodyAcc.entropy.Y  |   
-293 fBodyAcc.entropy.Z  |   
-294 fBodyAcc.maxInds.X  |   
-295 fBodyAcc.maxInds.Y  |   
-296 fBodyAcc.maxInds.Z  |   
-297 fBodyAcc.meanFreq.X |   
-298 fBodyAcc.meanFreq.Y |   
-299 fBodyAcc.meanFreq.Z |   
-300 fBodyAcc.skewness.X |   
-301 fBodyAcc.kurtosis.X |   
-302 fBodyAcc.skewness.Y |   
-303 fBodyAcc.kurtosis.Y |   
-304 fBodyAcc.skewness.Z |   
-305 fBodyAcc.kurtosis.Z |   
-306 fBodyAcc.bandsEnergy.1.8    |   
-307 fBodyAcc.bandsEnergy.9.16   |   
-308 fBodyAcc.bandsEnergy.17.24  |   
-309 fBodyAcc.bandsEnergy.25.32  |   
-310 fBodyAcc.bandsEnergy.33.40  |   
-311 fBodyAcc.bandsEnergy.41.48  |   
-312 fBodyAcc.bandsEnergy.49.56  |   
-313 fBodyAcc.bandsEnergy.57.64  |   
-314 fBodyAcc.bandsEnergy.1.16   |   
-315 fBodyAcc.bandsEnergy.17.32  |   
-316 fBodyAcc.bandsEnergy.33.48  |   
-317 fBodyAcc.bandsEnergy.49.64  |   
-318 fBodyAcc.bandsEnergy.1.24   |   
-319 fBodyAcc.bandsEnergy.25.48  |   
-320 fBodyAcc.bandsEnergy.1.8.1  |   
-321 fBodyAcc.bandsEnergy.9.16.1 |   
-322 fBodyAcc.bandsEnergy.17.24.1    |   
-323 fBodyAcc.bandsEnergy.25.32.1    |   
-324 fBodyAcc.bandsEnergy.33.40.1    |   
-325 fBodyAcc.bandsEnergy.41.48.1    |   
-326 fBodyAcc.bandsEnergy.49.56.1    |   
-327 fBodyAcc.bandsEnergy.57.64.1    |   
-328 fBodyAcc.bandsEnergy.1.16.1 |   
-329 fBodyAcc.bandsEnergy.17.32.1    |   
-330 fBodyAcc.bandsEnergy.33.48.1    |   
-331 fBodyAcc.bandsEnergy.49.64.1    |   
-332 fBodyAcc.bandsEnergy.1.24.1 |   
-333 fBodyAcc.bandsEnergy.25.48.1    |   
-334 fBodyAcc.bandsEnergy.1.8.2  |   
-335 fBodyAcc.bandsEnergy.9.16.2 |   
-336 fBodyAcc.bandsEnergy.17.24.2    |   
-337 fBodyAcc.bandsEnergy.25.32.2    |   
-338 fBodyAcc.bandsEnergy.33.40.2    |   
-339 fBodyAcc.bandsEnergy.41.48.2    |   
-340 fBodyAcc.bandsEnergy.49.56.2    |   
-341 fBodyAcc.bandsEnergy.57.64.2    |   
-342 fBodyAcc.bandsEnergy.1.16.2 |   
-343 fBodyAcc.bandsEnergy.17.32.2    |   
-344 fBodyAcc.bandsEnergy.33.48.2    |   
-345 fBodyAcc.bandsEnergy.49.64.2    |   
-346 fBodyAcc.bandsEnergy.1.24.2 |   
-347 fBodyAcc.bandsEnergy.25.48.2    |   
-348 fBodyAccJerk.mean.X |   
-349 fBodyAccJerk.mean.Y |   
-350 fBodyAccJerk.mean.Z |   
-351 fBodyAccJerk.std.X  |   
-352 fBodyAccJerk.std.Y  |   
-353 fBodyAccJerk.std.Z  |   
-354 fBodyAccJerk.mad.X  |   
-355 fBodyAccJerk.mad.Y  |   
-356 fBodyAccJerk.mad.Z  |   
-357 fBodyAccJerk.max.X  |   
-358 fBodyAccJerk.max.Y  |   
-359 fBodyAccJerk.max.Z  |   
-360 fBodyAccJerk.min.X  |   
-361 fBodyAccJerk.min.Y  |   
-362 fBodyAccJerk.min.Z  |   
-363 fBodyAccJerk.sma    |   
-364 fBodyAccJerk.energy.X   |   
-365 fBodyAccJerk.energy.Y   |   
-366 fBodyAccJerk.energy.Z   |   
-367 fBodyAccJerk.iqr.X  |   
-368 fBodyAccJerk.iqr.Y  |   
-369 fBodyAccJerk.iqr.Z  |   
-370 fBodyAccJerk.entropy.X  |   
-371 fBodyAccJerk.entropy.Y  |   
-372 fBodyAccJerk.entropy.Z  |   
-373 fBodyAccJerk.maxInds.X  |   
-374 fBodyAccJerk.maxInds.Y  |   
-375 fBodyAccJerk.maxInds.Z  |   
-376 fBodyAccJerk.meanFreq.X |   
-377 fBodyAccJerk.meanFreq.Y |   
-378 fBodyAccJerk.meanFreq.Z |   
-379 fBodyAccJerk.skewness.X |   
-380 fBodyAccJerk.kurtosis.X |   
-381 fBodyAccJerk.skewness.Y |   
-382 fBodyAccJerk.kurtosis.Y |   
-383 fBodyAccJerk.skewness.Z |   
-384 fBodyAccJerk.kurtosis.Z |   
-385 fBodyAccJerk.bandsEnergy.1.8    |   
-386 fBodyAccJerk.bandsEnergy.9.16   |   
-387 fBodyAccJerk.bandsEnergy.17.24  |   
-388 fBodyAccJerk.bandsEnergy.25.32  |   
-389 fBodyAccJerk.bandsEnergy.33.40  |   
-390 fBodyAccJerk.bandsEnergy.41.48  |   
-391 fBodyAccJerk.bandsEnergy.49.56  |   
-392 fBodyAccJerk.bandsEnergy.57.64  |   
-393 fBodyAccJerk.bandsEnergy.1.16   |   
-394 fBodyAccJerk.bandsEnergy.17.32  |   
-395 fBodyAccJerk.bandsEnergy.33.48  |   
-396 fBodyAccJerk.bandsEnergy.49.64  |   
-397 fBodyAccJerk.bandsEnergy.1.24   |   
-398 fBodyAccJerk.bandsEnergy.25.48  |   
-399 fBodyAccJerk.bandsEnergy.1.8.1  |   
-400 fBodyAccJerk.bandsEnergy.9.16.1 |   
-401 fBodyAccJerk.bandsEnergy.17.24.1    |   
-402 fBodyAccJerk.bandsEnergy.25.32.1    |   
-403 fBodyAccJerk.bandsEnergy.33.40.1    |   
-404 fBodyAccJerk.bandsEnergy.41.48.1    |   
-405 fBodyAccJerk.bandsEnergy.49.56.1    |   
-406 fBodyAccJerk.bandsEnergy.57.64.1    |   
-407 fBodyAccJerk.bandsEnergy.1.16.1 |   
-408 fBodyAccJerk.bandsEnergy.17.32.1    |   
-409 fBodyAccJerk.bandsEnergy.33.48.1    |   
-410 fBodyAccJerk.bandsEnergy.49.64.1    |   
-411 fBodyAccJerk.bandsEnergy.1.24.1 |   
-412 fBodyAccJerk.bandsEnergy.25.48.1    |   
-413 fBodyAccJerk.bandsEnergy.1.8.2  |   
-414 fBodyAccJerk.bandsEnergy.9.16.2 |   
-415 fBodyAccJerk.bandsEnergy.17.24.2    |   
-416 fBodyAccJerk.bandsEnergy.25.32.2    |   
-417 fBodyAccJerk.bandsEnergy.33.40.2    |   
-418 fBodyAccJerk.bandsEnergy.41.48.2    |   
-419 fBodyAccJerk.bandsEnergy.49.56.2    |   
-420 fBodyAccJerk.bandsEnergy.57.64.2    |   
-421 fBodyAccJerk.bandsEnergy.1.16.2 |   
-422 fBodyAccJerk.bandsEnergy.17.32.2    |   
-423 fBodyAccJerk.bandsEnergy.33.48.2    |   
-424 fBodyAccJerk.bandsEnergy.49.64.2    |   
-425 fBodyAccJerk.bandsEnergy.1.24.2 |   
-426 fBodyAccJerk.bandsEnergy.25.48.2    |   
-427 fBodyGyro.mean.X    |   
-428 fBodyGyro.mean.Y    |   
-429 fBodyGyro.mean.Z    |   
-430 fBodyGyro.std.X |   
-431 fBodyGyro.std.Y |   
-432 fBodyGyro.std.Z |   
-433 fBodyGyro.mad.X |   
-434 fBodyGyro.mad.Y |   
-435 fBodyGyro.mad.Z |   
-436 fBodyGyro.max.X |   
-437 fBodyGyro.max.Y |   
-438 fBodyGyro.max.Z |   
-439 fBodyGyro.min.X |   
-440 fBodyGyro.min.Y |   
-441 fBodyGyro.min.Z |   
-442 fBodyGyro.sma   |   
-443 fBodyGyro.energy.X  |   
-444 fBodyGyro.energy.Y  |   
-445 fBodyGyro.energy.Z  |   
-446 fBodyGyro.iqr.X |   
-447 fBodyGyro.iqr.Y |   
-448 fBodyGyro.iqr.Z |   
-449 fBodyGyro.entropy.X |   
-450 fBodyGyro.entropy.Y |   
-451 fBodyGyro.entropy.Z |   
-452 fBodyGyro.maxInds.X |   
-453 fBodyGyro.maxInds.Y |   
-454 fBodyGyro.maxInds.Z |   
-455 fBodyGyro.meanFreq.X    |   
-456 fBodyGyro.meanFreq.Y    |   
-457 fBodyGyro.meanFreq.Z    |   
-458 fBodyGyro.skewness.X    |   
-459 fBodyGyro.kurtosis.X    |   
-460 fBodyGyro.skewness.Y    |   
-461 fBodyGyro.kurtosis.Y    |   
-462 fBodyGyro.skewness.Z    |   
-463 fBodyGyro.kurtosis.Z    |   
-464 fBodyGyro.bandsEnergy.1.8   |   
-465 fBodyGyro.bandsEnergy.9.16  |   
-466 fBodyGyro.bandsEnergy.17.24 |   
-467 fBodyGyro.bandsEnergy.25.32 |   
-468 fBodyGyro.bandsEnergy.33.40 |   
-469 fBodyGyro.bandsEnergy.41.48 |   
-470 fBodyGyro.bandsEnergy.49.56 |   
-471 fBodyGyro.bandsEnergy.57.64 |   
-472 fBodyGyro.bandsEnergy.1.16  |   
-473 fBodyGyro.bandsEnergy.17.32 |   
-474 fBodyGyro.bandsEnergy.33.48 |   
-475 fBodyGyro.bandsEnergy.49.64 |   
-476 fBodyGyro.bandsEnergy.1.24  |   
-477 fBodyGyro.bandsEnergy.25.48 |   
-478 fBodyGyro.bandsEnergy.1.8.1 |   
-479 fBodyGyro.bandsEnergy.9.16.1    |   
-480 fBodyGyro.bandsEnergy.17.24.1   |   
-481 fBodyGyro.bandsEnergy.25.32.1   |   
-482 fBodyGyro.bandsEnergy.33.40.1   |   
-483 fBodyGyro.bandsEnergy.41.48.1   |   
-484 fBodyGyro.bandsEnergy.49.56.1   |   
-485 fBodyGyro.bandsEnergy.57.64.1   |   
-486 fBodyGyro.bandsEnergy.1.16.1    |   
-487 fBodyGyro.bandsEnergy.17.32.1   |   
-488 fBodyGyro.bandsEnergy.33.48.1   |   
-489 fBodyGyro.bandsEnergy.49.64.1   |   
-490 fBodyGyro.bandsEnergy.1.24.1    |   
-491 fBodyGyro.bandsEnergy.25.48.1   |   
-492 fBodyGyro.bandsEnergy.1.8.2 |   
-493 fBodyGyro.bandsEnergy.9.16.2    |   
-494 fBodyGyro.bandsEnergy.17.24.2   |   
-495 fBodyGyro.bandsEnergy.25.32.2   |   
-496 fBodyGyro.bandsEnergy.33.40.2   |   
-497 fBodyGyro.bandsEnergy.41.48.2   |   
-498 fBodyGyro.bandsEnergy.49.56.2   |   
-499 fBodyGyro.bandsEnergy.57.64.2   |   
-500 fBodyGyro.bandsEnergy.1.16.2    |   
-501 fBodyGyro.bandsEnergy.17.32.2   |   
-502 fBodyGyro.bandsEnergy.33.48.2   |   
-503 fBodyGyro.bandsEnergy.49.64.2   |   
-504 fBodyGyro.bandsEnergy.1.24.2    |   
-505 fBodyGyro.bandsEnergy.25.48.2   |   
-506 fBodyAccMag.mean    |   
-507 fBodyAccMag.std |   
-508 fBodyAccMag.mad |   
-509 fBodyAccMag.max |   
-510 fBodyAccMag.min |   
-511 fBodyAccMag.sma |   
-512 fBodyAccMag.energy  |   
-513 fBodyAccMag.iqr |   
-514 fBodyAccMag.entropy |   
-515 fBodyAccMag.maxInds |   
-516 fBodyAccMag.meanFreq    |   
-517 fBodyAccMag.skewness    |   
-518 fBodyAccMag.kurtosis    |   
-519 fBodyBodyAccJerkMag.mean    |   
-520 fBodyBodyAccJerkMag.std |   
-521 fBodyBodyAccJerkMag.mad |   
-522 fBodyBodyAccJerkMag.max |   
-523 fBodyBodyAccJerkMag.min |   
-524 fBodyBodyAccJerkMag.sma |   
-525 fBodyBodyAccJerkMag.energy  |   
-526 fBodyBodyAccJerkMag.iqr |   
-527 fBodyBodyAccJerkMag.entropy |   
-528 fBodyBodyAccJerkMag.maxInds |   
-529 fBodyBodyAccJerkMag.meanFreq    |   
-530 fBodyBodyAccJerkMag.skewness    |   
-531 fBodyBodyAccJerkMag.kurtosis    |   
-532 fBodyBodyGyroMag.mean   |   
-533 fBodyBodyGyroMag.std    |   
-534 fBodyBodyGyroMag.mad    |   
-535 fBodyBodyGyroMag.max    |   
-536 fBodyBodyGyroMag.min    |   
-537 fBodyBodyGyroMag.sma    |   
-538 fBodyBodyGyroMag.energy |   
-539 fBodyBodyGyroMag.iqr    |   
-540 fBodyBodyGyroMag.entropy    |   
-541 fBodyBodyGyroMag.maxInds    |   
-542 fBodyBodyGyroMag.meanFreq   |   
-543 fBodyBodyGyroMag.skewness   |   
-544 fBodyBodyGyroMag.kurtosis   |   
-545 fBodyBodyGyroJerkMag.mean   |   
-546 fBodyBodyGyroJerkMag.std    |   
-547 fBodyBodyGyroJerkMag.mad    |   
-548 fBodyBodyGyroJerkMag.max    |   
-549 fBodyBodyGyroJerkMag.min    |   
-550 fBodyBodyGyroJerkMag.sma    |   
-551 fBodyBodyGyroJerkMag.energy |   
-552 fBodyBodyGyroJerkMag.iqr    |   
-553 fBodyBodyGyroJerkMag.entropy    |   
-554 fBodyBodyGyroJerkMag.maxInds    |   
-555 fBodyBodyGyroJerkMag.meanFreq   |   
-556 fBodyBodyGyroJerkMag.skewness   |   
-557 fBodyBodyGyroJerkMag.kurtosis   |   
-558 angletBodyAccMean.gravity   |   
-559 angletBodyAccJerkMean.gravityMean   |   
-560 angletBodyGyroMean.gravityMean  |   
-561 angletBodyGyroJerkMean.gravityMean  |   
-562 angleX.gravityMean  |   
-563 angleY.gravityMean  |   
-564 angleZ.gravityMean  |   
+This resulted in the following columns  
 
+  Column Name -- Description of Contents  
+subject -- Study participant identifier, 1...30  
+activity -- Type of activity, factor, 6 levels, see   
+type -- "Train" or "Test"  
+tBodyAcc.mean.X   
+   --  Time domain body accelerometer mean value in the X axis
+tBodyAcc.mean.Y   
+   --  Time domain body accelerometer mean value in the Y axis
+tBodyAcc.mean.Z   
+   --  Time domain body accelerometer mean value in the Z axis
+tBodyAcc.std.X    
+   --  Time domain body accelerometer standard deviation in the X axis
+tBodyAcc.std.Y    
+   --  Time domain body accelerometer standard deviation in the Y axis
+tBodyAcc.std.Z    
+   --  Time domain body accelerometer standard deviation in the Z axis
+tBodyAcc.mad.X    
+   --  Time domain body accelerometer median absolute deviationin the X axis
+tBodyAcc.mad.Y    
+   --  Time domain body accelerometer median absolute deviationin the Y axis
+tBodyAcc.mad.Z    
+   --  Time domain body accelerometer median absolute deviationin the Z axis
+tBodyAcc.max.X    
+   --  Time domain body accelerometer maximum value in the X axis
+tBodyAcc.max.Y    
+   --  Time domain body accelerometer maximum value in the Y axis
+tBodyAcc.max.Z    
+   --  Time domain body accelerometer maximum value in the Z axis
+tBodyAcc.min.X    
+   --  Time domain body accelerometer minimum value in the X axis
+tBodyAcc.min.Y    
+   --  Time domain body accelerometer minimum value in the Y axis
+tBodyAcc.min.Z    
+   --  Time domain body accelerometer minimum value in the Z axis
+tBodyAcc.sma      
+   --  Time domain body accelerometer signal magnitude area
+tBodyAcc.energy.X     
+   --  Time domain body accelerometer energy measure in the X axis
+tBodyAcc.energy.Y     
+   --  Time domain body accelerometer energy measure in the Y axis
+tBodyAcc.energy.Z     
+   --  Time domain body accelerometer energy measure in the Z axis
+tBodyAcc.iqr.X    
+   --  Time domain body accelerometer interquartile range in the X axis
+tBodyAcc.iqr.Y    
+   --  Time domain body accelerometer interquartile range in the Y axis
+tBodyAcc.iqr.Z    
+   --  Time domain body accelerometer interquartile range in the Z axis
+tBodyAcc.entropy.X    
+   --  Time domain body accelerometer signal entropy in the X axis
+tBodyAcc.entropy.Y    
+   --  Time domain body accelerometer signal entropy in the Y axis
+tBodyAcc.entropy.Z    
+   --  Time domain body accelerometer signal entropy in the Z axis
+tBodyAcc.arCoeff.X.1      
+   --  Time domain body accelerometer autoregression coefficients in the X axis,1
+tBodyAcc.arCoeff.X.2      
+   --  Time domain body accelerometer autoregression coefficients in the X axis,2
+tBodyAcc.arCoeff.X.3      
+   --  Time domain body accelerometer autoregression coefficients in the X axis,3
+tBodyAcc.arCoeff.X.4      
+   --  Time domain body accelerometer autoregression coefficients in the X axis,4
+tBodyAcc.arCoeff.Y.1      
+   --  Time domain body accelerometer autoregression coefficients in the Y axis,1
+tBodyAcc.arCoeff.Y.2      
+   --  Time domain body accelerometer autoregression coefficients in the Y axis,2
+tBodyAcc.arCoeff.Y.3      
+   --  Time domain body accelerometer autoregression coefficients in the Y axis,3
+tBodyAcc.arCoeff.Y.4      
+   --  Time domain body accelerometer autoregression coefficients in the Y axis,4
+tBodyAcc.arCoeff.Z.1      
+   --  Time domain body accelerometer autoregression coefficients in the Z axis,1
+tBodyAcc.arCoeff.Z.2      
+   --  Time domain body accelerometer autoregression coefficients in the Z axis,2
+tBodyAcc.arCoeff.Z.3      
+   --  Time domain body accelerometer autoregression coefficients in the Z axis,3
+tBodyAcc.arCoeff.Z.4      
+   --  Time domain body accelerometer autoregression coefficients in the Z axis,4
+tBodyAcc.correlation.X.Y      
+   --  Time domain body accelerometer -correlation()in the X axis,Y
+tBodyAcc.correlation.X.Z      
+   --  Time domain body accelerometer -correlation()in the X axis,Z
+tBodyAcc.correlation.Y.Z      
+   --  Time domain body accelerometer -correlation()in the Y axis,Z
+tGravityAcc.mean.X    
+   --  Time domain gravity accelerometer mean value in the X axis
+tGravityAcc.mean.Y    
+   --  Time domain gravity accelerometer mean value in the Y axis
+tGravityAcc.mean.Z    
+   --  Time domain gravity accelerometer mean value in the Z axis
+tGravityAcc.std.X     
+   --  Time domain gravity accelerometer standard deviation in the X axis
+tGravityAcc.std.Y     
+   --  Time domain gravity accelerometer standard deviation in the Y axis
+tGravityAcc.std.Z     
+   --  Time domain gravity accelerometer standard deviation in the Z axis
+tGravityAcc.mad.X     
+   --  Time domain gravity accelerometer median absolute deviationin the X axis
+tGravityAcc.mad.Y     
+   --  Time domain gravity accelerometer median absolute deviationin the Y axis
+tGravityAcc.mad.Z     
+   --  Time domain gravity accelerometer median absolute deviationin the Z axis
+tGravityAcc.max.X     
+   --  Time domain gravity accelerometer maximum value in the X axis
+tGravityAcc.max.Y     
+   --  Time domain gravity accelerometer maximum value in the Y axis
+tGravityAcc.max.Z     
+   --  Time domain gravity accelerometer maximum value in the Z axis
+tGravityAcc.min.X     
+   --  Time domain gravity accelerometer minimum value in the X axis
+tGravityAcc.min.Y     
+   --  Time domain gravity accelerometer minimum value in the Y axis
+tGravityAcc.min.Z     
+   --  Time domain gravity accelerometer minimum value in the Z axis
+tGravityAcc.sma   
+   --  Time domain gravity accelerometer signal magnitude area
+tGravityAcc.energy.X      
+   --  Time domain gravity accelerometer energy measure in the X axis
+tGravityAcc.energy.Y      
+   --  Time domain gravity accelerometer energy measure in the Y axis
+tGravityAcc.energy.Z      
+   --  Time domain gravity accelerometer energy measure in the Z axis
+tGravityAcc.iqr.X     
+   --  Time domain gravity accelerometer interquartile range in the X axis
+tGravityAcc.iqr.Y     
+   --  Time domain gravity accelerometer interquartile range in the Y axis
+tGravityAcc.iqr.Z     
+   --  Time domain gravity accelerometer interquartile range in the Z axis
+tGravityAcc.entropy.X     
+   --  Time domain gravity accelerometer signal entropy in the X axis
+tGravityAcc.entropy.Y     
+   --  Time domain gravity accelerometer signal entropy in the Y axis
+tGravityAcc.entropy.Z     
+   --  Time domain gravity accelerometer signal entropy in the Z axis
+tGravityAcc.arCoeff.X.1   
+   --  Time domain gravity accelerometer autoregression coefficients in the X axis,1
+tGravityAcc.arCoeff.X.2   
+   --  Time domain gravity accelerometer autoregression coefficients in the X axis,2
+tGravityAcc.arCoeff.X.3   
+   --  Time domain gravity accelerometer autoregression coefficients in the X axis,3
+tGravityAcc.arCoeff.X.4   
+   --  Time domain gravity accelerometer autoregression coefficients in the X axis,4
+tGravityAcc.arCoeff.Y.1   
+   --  Time domain gravity accelerometer autoregression coefficients in the Y axis,1
+tGravityAcc.arCoeff.Y.2   
+   --  Time domain gravity accelerometer autoregression coefficients in the Y axis,2
+tGravityAcc.arCoeff.Y.3   
+   --  Time domain gravity accelerometer autoregression coefficients in the Y axis,3
+tGravityAcc.arCoeff.Y.4   
+   --  Time domain gravity accelerometer autoregression coefficients in the Y axis,4
+tGravityAcc.arCoeff.Z.1   
+   --  Time domain gravity accelerometer autoregression coefficients in the Z axis,1
+tGravityAcc.arCoeff.Z.2   
+   --  Time domain gravity accelerometer autoregression coefficients in the Z axis,2
+tGravityAcc.arCoeff.Z.3   
+   --  Time domain gravity accelerometer autoregression coefficients in the Z axis,3
+tGravityAcc.arCoeff.Z.4   
+   --  Time domain gravity accelerometer autoregression coefficients in the Z axis,4
+tGravityAcc.correlation.X.Y       
+   --  Time domain gravity accelerometer -correlation()in the X axis,Y
+tGravityAcc.correlation.X.Z       
+   --  Time domain gravity accelerometer -correlation()in the X axis,Z
+tGravityAcc.correlation.Y.Z       
+   --  Time domain gravity accelerometer -correlation()in the Y axis,Z
+tBodyAccJerk.mean.X       
+   --  Time domain body accelerometer Jerkmean value in the X axis
+tBodyAccJerk.mean.Y       
+   --  Time domain body accelerometer Jerkmean value in the Y axis
+tBodyAccJerk.mean.Z       
+   --  Time domain body accelerometer Jerkmean value in the Z axis
+tBodyAccJerk.std.X    
+   --  Time domain body accelerometer Jerkstandard deviation in the X axis
+tBodyAccJerk.std.Y    
+   --  Time domain body accelerometer Jerkstandard deviation in the Y axis
+tBodyAccJerk.std.Z    
+   --  Time domain body accelerometer Jerkstandard deviation in the Z axis
+tBodyAccJerk.mad.X    
+   --  Time domain body accelerometer Jerkmedian absolute deviationin the X axis
+tBodyAccJerk.mad.Y    
+   --  Time domain body accelerometer Jerkmedian absolute deviationin the Y axis
+tBodyAccJerk.mad.Z    
+   --  Time domain body accelerometer Jerkmedian absolute deviationin the Z axis
+tBodyAccJerk.max.X    
+   --  Time domain body accelerometer Jerkmaximum value in the X axis
+tBodyAccJerk.max.Y    
+   --  Time domain body accelerometer Jerkmaximum value in the Y axis
+tBodyAccJerk.max.Z    
+   --  Time domain body accelerometer Jerkmaximum value in the Z axis
+tBodyAccJerk.min.X    
+   --  Time domain body accelerometer Jerkminimum value in the X axis
+tBodyAccJerk.min.Y    
+   --  Time domain body accelerometer Jerkminimum value in the Y axis
+tBodyAccJerk.min.Z    
+   --  Time domain body accelerometer Jerkminimum value in the Z axis
+tBodyAccJerk.sma      
+   --  Time domain body accelerometer Jerksignal magnitude area
+tBodyAccJerk.energy.X     
+   --  Time domain body accelerometer Jerkenergy measure in the X axis
+tBodyAccJerk.energy.Y     
+   --  Time domain body accelerometer Jerkenergy measure in the Y axis
+tBodyAccJerk.energy.Z     
+   --  Time domain body accelerometer Jerkenergy measure in the Z axis
+tBodyAccJerk.iqr.X    
+   --  Time domain body accelerometer Jerkinterquartile range in the X axis
+tBodyAccJerk.iqr.Y    
+   --  Time domain body accelerometer Jerkinterquartile range in the Y axis
+tBodyAccJerk.iqr.Z    
+   --  Time domain body accelerometer Jerkinterquartile range in the Z axis
+tBodyAccJerk.entropy.X    
+   --  Time domain body accelerometer Jerksignal entropy in the X axis
+tBodyAccJerk.entropy.Y    
+   --  Time domain body accelerometer Jerksignal entropy in the Y axis
+tBodyAccJerk.entropy.Z    
+   --  Time domain body accelerometer Jerksignal entropy in the Z axis
+tBodyAccJerk.arCoeff.X.1      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the X axis,1
+tBodyAccJerk.arCoeff.X.2      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the X axis,2
+tBodyAccJerk.arCoeff.X.3      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the X axis,3
+tBodyAccJerk.arCoeff.X.4      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the X axis,4
+tBodyAccJerk.arCoeff.Y.1      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the Y axis,1
+tBodyAccJerk.arCoeff.Y.2      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the Y axis,2
+tBodyAccJerk.arCoeff.Y.3      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the Y axis,3
+tBodyAccJerk.arCoeff.Y.4      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the Y axis,4
+tBodyAccJerk.arCoeff.Z.1      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the Z axis,1
+tBodyAccJerk.arCoeff.Z.2      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the Z axis,2
+tBodyAccJerk.arCoeff.Z.3      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the Z axis,3
+tBodyAccJerk.arCoeff.Z.4      
+   --  Time domain body accelerometer Jerkautoregression coefficients in the Z axis,4
+tBodyAccJerk.correlation.X.Y      
+   --  Time domain body accelerometer Jerk-correlation()in the X axis,Y
+tBodyAccJerk.correlation.X.Z      
+   --  Time domain body accelerometer Jerk-correlation()in the X axis,Z
+tBodyAccJerk.correlation.Y.Z      
+   --  Time domain body accelerometer Jerk-correlation()in the Y axis,Z
+tBodyGyro.mean.X      
+   --  Time domain body gyroscope mean value in the X axis
+tBodyGyro.mean.Y      
+   --  Time domain body gyroscope mean value in the Y axis
+tBodyGyro.mean.Z      
+   --  Time domain body gyroscope mean value in the Z axis
+tBodyGyro.std.X   
+   --  Time domain body gyroscope standard deviation in the X axis
+tBodyGyro.std.Y   
+   --  Time domain body gyroscope standard deviation in the Y axis
+tBodyGyro.std.Z   
+   --  Time domain body gyroscope standard deviation in the Z axis
+tBodyGyro.mad.X   
+   --  Time domain body gyroscope median absolute deviationin the X axis
+tBodyGyro.mad.Y   
+   --  Time domain body gyroscope median absolute deviationin the Y axis
+tBodyGyro.mad.Z   
+   --  Time domain body gyroscope median absolute deviationin the Z axis
+tBodyGyro.max.X   
+   --  Time domain body gyroscope maximum value in the X axis
+tBodyGyro.max.Y   
+   --  Time domain body gyroscope maximum value in the Y axis
+tBodyGyro.max.Z   
+   --  Time domain body gyroscope maximum value in the Z axis
+tBodyGyro.min.X   
+   --  Time domain body gyroscope minimum value in the X axis
+tBodyGyro.min.Y   
+   --  Time domain body gyroscope minimum value in the Y axis
+tBodyGyro.min.Z   
+   --  Time domain body gyroscope minimum value in the Z axis
+tBodyGyro.sma     
+   --  Time domain body gyroscope signal magnitude area
+tBodyGyro.energy.X    
+   --  Time domain body gyroscope energy measure in the X axis
+tBodyGyro.energy.Y    
+   --  Time domain body gyroscope energy measure in the Y axis
+tBodyGyro.energy.Z    
+   --  Time domain body gyroscope energy measure in the Z axis
+tBodyGyro.iqr.X   
+   --  Time domain body gyroscope interquartile range in the X axis
+tBodyGyro.iqr.Y   
+   --  Time domain body gyroscope interquartile range in the Y axis
+tBodyGyro.iqr.Z   
+   --  Time domain body gyroscope interquartile range in the Z axis
+tBodyGyro.entropy.X   
+   --  Time domain body gyroscope signal entropy in the X axis
+tBodyGyro.entropy.Y   
+   --  Time domain body gyroscope signal entropy in the Y axis
+tBodyGyro.entropy.Z   
+   --  Time domain body gyroscope signal entropy in the Z axis
+tBodyGyro.arCoeff.X.1     
+   --  Time domain body gyroscope autoregression coefficients in the X axis,1
+tBodyGyro.arCoeff.X.2     
+   --  Time domain body gyroscope autoregression coefficients in the X axis,2
+tBodyGyro.arCoeff.X.3     
+   --  Time domain body gyroscope autoregression coefficients in the X axis,3
+tBodyGyro.arCoeff.X.4     
+   --  Time domain body gyroscope autoregression coefficients in the X axis,4
+tBodyGyro.arCoeff.Y.1     
+   --  Time domain body gyroscope autoregression coefficients in the Y axis,1
+tBodyGyro.arCoeff.Y.2     
+   --  Time domain body gyroscope autoregression coefficients in the Y axis,2
+tBodyGyro.arCoeff.Y.3     
+   --  Time domain body gyroscope autoregression coefficients in the Y axis,3
+tBodyGyro.arCoeff.Y.4     
+   --  Time domain body gyroscope autoregression coefficients in the Y axis,4
+tBodyGyro.arCoeff.Z.1     
+   --  Time domain body gyroscope autoregression coefficients in the Z axis,1
+tBodyGyro.arCoeff.Z.2     
+   --  Time domain body gyroscope autoregression coefficients in the Z axis,2
+tBodyGyro.arCoeff.Z.3     
+   --  Time domain body gyroscope autoregression coefficients in the Z axis,3
+tBodyGyro.arCoeff.Z.4     
+   --  Time domain body gyroscope autoregression coefficients in the Z axis,4
+tBodyGyro.correlation.X.Y     
+   --  Time domain body gyroscope -correlation()in the X axis,Y
+tBodyGyro.correlation.X.Z     
+   --  Time domain body gyroscope -correlation()in the X axis,Z
+tBodyGyro.correlation.Y.Z     
+   --  Time domain body gyroscope -correlation()in the Y axis,Z
+tBodyGyroJerk.mean.X      
+   --  Time domain body gyroscope Jerkmean value in the X axis
+tBodyGyroJerk.mean.Y      
+   --  Time domain body gyroscope Jerkmean value in the Y axis
+tBodyGyroJerk.mean.Z      
+   --  Time domain body gyroscope Jerkmean value in the Z axis
+tBodyGyroJerk.std.X   
+   --  Time domain body gyroscope Jerkstandard deviation in the X axis
+tBodyGyroJerk.std.Y   
+   --  Time domain body gyroscope Jerkstandard deviation in the Y axis
+tBodyGyroJerk.std.Z   
+   --  Time domain body gyroscope Jerkstandard deviation in the Z axis
+tBodyGyroJerk.mad.X   
+   --  Time domain body gyroscope Jerkmedian absolute deviationin the X axis
+tBodyGyroJerk.mad.Y   
+   --  Time domain body gyroscope Jerkmedian absolute deviationin the Y axis
+tBodyGyroJerk.mad.Z   
+   --  Time domain body gyroscope Jerkmedian absolute deviationin the Z axis
+tBodyGyroJerk.max.X   
+   --  Time domain body gyroscope Jerkmaximum value in the X axis
+tBodyGyroJerk.max.Y   
+   --  Time domain body gyroscope Jerkmaximum value in the Y axis
+tBodyGyroJerk.max.Z   
+   --  Time domain body gyroscope Jerkmaximum value in the Z axis
+tBodyGyroJerk.min.X   
+   --  Time domain body gyroscope Jerkminimum value in the X axis
+tBodyGyroJerk.min.Y   
+   --  Time domain body gyroscope Jerkminimum value in the Y axis
+tBodyGyroJerk.min.Z   
+   --  Time domain body gyroscope Jerkminimum value in the Z axis
+tBodyGyroJerk.sma     
+   --  Time domain body gyroscope Jerksignal magnitude area
+tBodyGyroJerk.energy.X    
+   --  Time domain body gyroscope Jerkenergy measure in the X axis
+tBodyGyroJerk.energy.Y    
+   --  Time domain body gyroscope Jerkenergy measure in the Y axis
+tBodyGyroJerk.energy.Z    
+   --  Time domain body gyroscope Jerkenergy measure in the Z axis
+tBodyGyroJerk.iqr.X   
+   --  Time domain body gyroscope Jerkinterquartile range in the X axis
+tBodyGyroJerk.iqr.Y   
+   --  Time domain body gyroscope Jerkinterquartile range in the Y axis
+tBodyGyroJerk.iqr.Z   
+   --  Time domain body gyroscope Jerkinterquartile range in the Z axis
+tBodyGyroJerk.entropy.X   
+   --  Time domain body gyroscope Jerksignal entropy in the X axis
+tBodyGyroJerk.entropy.Y   
+   --  Time domain body gyroscope Jerksignal entropy in the Y axis
+tBodyGyroJerk.entropy.Z   
+   --  Time domain body gyroscope Jerksignal entropy in the Z axis
+tBodyGyroJerk.arCoeff.X.1     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the X axis,1
+tBodyGyroJerk.arCoeff.X.2     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the X axis,2
+tBodyGyroJerk.arCoeff.X.3     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the X axis,3
+tBodyGyroJerk.arCoeff.X.4     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the X axis,4
+tBodyGyroJerk.arCoeff.Y.1     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the Y axis,1
+tBodyGyroJerk.arCoeff.Y.2     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the Y axis,2
+tBodyGyroJerk.arCoeff.Y.3     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the Y axis,3
+tBodyGyroJerk.arCoeff.Y.4     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the Y axis,4
+tBodyGyroJerk.arCoeff.Z.1     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the Z axis,1
+tBodyGyroJerk.arCoeff.Z.2     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the Z axis,2
+tBodyGyroJerk.arCoeff.Z.3     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the Z axis,3
+tBodyGyroJerk.arCoeff.Z.4     
+   --  Time domain body gyroscope Jerkautoregression coefficients in the Z axis,4
+tBodyGyroJerk.correlation.X.Y     
+   --  Time domain body gyroscope Jerk-correlation()in the X axis,Y
+tBodyGyroJerk.correlation.X.Z     
+   --  Time domain body gyroscope Jerk-correlation()in the X axis,Z
+tBodyGyroJerk.correlation.Y.Z     
+   --  Time domain body gyroscope Jerk-correlation()in the Y axis,Z
+tBodyAccMag.mean      
+   --  Time domain body accelerometer Magmean value 
+tBodyAccMag.std   
+   --  Time domain body accelerometer Magstandard deviation 
+tBodyAccMag.mad   
+   --  Time domain body accelerometer Magmedian absolute deviation
+tBodyAccMag.max   
+   --  Time domain body accelerometer Magmaximum value 
+tBodyAccMag.min   
+   --  Time domain body accelerometer Magminimum value 
+tBodyAccMag.sma   
+   --  Time domain body accelerometer Magsignal magnitude area
+tBodyAccMag.energy    
+   --  Time domain body accelerometer Magenergy measure 
+tBodyAccMag.iqr   
+   --  Time domain body accelerometer Maginterquartile range 
+tBodyAccMag.entropy   
+   --  Time domain body accelerometer Magsignal entropy 
+tBodyAccMag.arCoeff1      
+   --  Time domain body accelerometer Magautoregression coefficients 1
+tBodyAccMag.arCoeff2      
+   --  Time domain body accelerometer Magautoregression coefficients 2
+tBodyAccMag.arCoeff3      
+   --  Time domain body accelerometer Magautoregression coefficients 3
+tBodyAccMag.arCoeff4      
+   --  Time domain body accelerometer Magautoregression coefficients 4
+tGravityAccMag.mean       
+   --  Time domain gravity accelerometer Magmean value 
+tGravityAccMag.std    
+   --  Time domain gravity accelerometer Magstandard deviation 
+tGravityAccMag.mad    
+   --  Time domain gravity accelerometer Magmedian absolute deviation
+tGravityAccMag.max    
+   --  Time domain gravity accelerometer Magmaximum value 
+tGravityAccMag.min    
+   --  Time domain gravity accelerometer Magminimum value 
+tGravityAccMag.sma    
+   --  Time domain gravity accelerometer Magsignal magnitude area
+tGravityAccMag.energy     
+   --  Time domain gravity accelerometer Magenergy measure 
+tGravityAccMag.iqr    
+   --  Time domain gravity accelerometer Maginterquartile range 
+tGravityAccMag.entropy    
+   --  Time domain gravity accelerometer Magsignal entropy 
+tGravityAccMag.arCoeff1       
+   --  Time domain gravity accelerometer Magautoregression coefficients 1
+tGravityAccMag.arCoeff2       
+   --  Time domain gravity accelerometer Magautoregression coefficients 2
+tGravityAccMag.arCoeff3       
+   --  Time domain gravity accelerometer Magautoregression coefficients 3
+tGravityAccMag.arCoeff4       
+   --  Time domain gravity accelerometer Magautoregression coefficients 4
+tBodyAccJerkMag.mean      
+   --  Time domain body accelerometer JerkMagmean value 
+tBodyAccJerkMag.std       
+   --  Time domain body accelerometer JerkMagstandard deviation 
+tBodyAccJerkMag.mad       
+   --  Time domain body accelerometer JerkMagmedian absolute deviation
+tBodyAccJerkMag.max       
+   --  Time domain body accelerometer JerkMagmaximum value 
+tBodyAccJerkMag.min       
+   --  Time domain body accelerometer JerkMagminimum value 
+tBodyAccJerkMag.sma       
+   --  Time domain body accelerometer JerkMagsignal magnitude area
+tBodyAccJerkMag.energy    
+   --  Time domain body accelerometer JerkMagenergy measure 
+tBodyAccJerkMag.iqr       
+   --  Time domain body accelerometer JerkMaginterquartile range 
+tBodyAccJerkMag.entropy       
+   --  Time domain body accelerometer JerkMagsignal entropy 
+tBodyAccJerkMag.arCoeff1      
+   --  Time domain body accelerometer JerkMagautoregression coefficients 1
+tBodyAccJerkMag.arCoeff2      
+   --  Time domain body accelerometer JerkMagautoregression coefficients 2
+tBodyAccJerkMag.arCoeff3      
+   --  Time domain body accelerometer JerkMagautoregression coefficients 3
+tBodyAccJerkMag.arCoeff4      
+   --  Time domain body accelerometer JerkMagautoregression coefficients 4
+tBodyGyroMag.mean     
+   --  Time domain body gyroscope Magmean value 
+tBodyGyroMag.std      
+   --  Time domain body gyroscope Magstandard deviation 
+tBodyGyroMag.mad      
+   --  Time domain body gyroscope Magmedian absolute deviation
+tBodyGyroMag.max      
+   --  Time domain body gyroscope Magmaximum value 
+tBodyGyroMag.min      
+   --  Time domain body gyroscope Magminimum value 
+tBodyGyroMag.sma      
+   --  Time domain body gyroscope Magsignal magnitude area
+tBodyGyroMag.energy       
+   --  Time domain body gyroscope Magenergy measure 
+tBodyGyroMag.iqr      
+   --  Time domain body gyroscope Maginterquartile range 
+tBodyGyroMag.entropy      
+   --  Time domain body gyroscope Magsignal entropy 
+tBodyGyroMag.arCoeff1     
+   --  Time domain body gyroscope Magautoregression coefficients 1
+tBodyGyroMag.arCoeff2     
+   --  Time domain body gyroscope Magautoregression coefficients 2
+tBodyGyroMag.arCoeff3     
+   --  Time domain body gyroscope Magautoregression coefficients 3
+tBodyGyroMag.arCoeff4     
+   --  Time domain body gyroscope Magautoregression coefficients 4
+tBodyGyroJerkMag.mean     
+   --  Time domain body gyroscope JerkMagmean value 
+tBodyGyroJerkMag.std      
+   --  Time domain body gyroscope JerkMagstandard deviation 
+tBodyGyroJerkMag.mad      
+   --  Time domain body gyroscope JerkMagmedian absolute deviation
+tBodyGyroJerkMag.max      
+   --  Time domain body gyroscope JerkMagmaximum value 
+tBodyGyroJerkMag.min      
+   --  Time domain body gyroscope JerkMagminimum value 
+tBodyGyroJerkMag.sma      
+   --  Time domain body gyroscope JerkMagsignal magnitude area
+tBodyGyroJerkMag.energy       
+   --  Time domain body gyroscope JerkMagenergy measure 
+tBodyGyroJerkMag.iqr      
+   --  Time domain body gyroscope JerkMaginterquartile range 
+tBodyGyroJerkMag.entropy      
+   --  Time domain body gyroscope JerkMagsignal entropy 
+tBodyGyroJerkMag.arCoeff1     
+   --  Time domain body gyroscope JerkMagautoregression coefficients 1
+tBodyGyroJerkMag.arCoeff2     
+   --  Time domain body gyroscope JerkMagautoregression coefficients 2
+tBodyGyroJerkMag.arCoeff3     
+   --  Time domain body gyroscope JerkMagautoregression coefficients 3
+tBodyGyroJerkMag.arCoeff4     
+   --  Time domain body gyroscope JerkMagautoregression coefficients 4
+fBodyAcc.mean.X   
+   --  FFT body accelerometer mean value in the X axis
+fBodyAcc.mean.Y   
+   --  FFT body accelerometer mean value in the Y axis
+fBodyAcc.mean.Z   
+   --  FFT body accelerometer mean value in the Z axis
+fBodyAcc.std.X    
+   --  FFT body accelerometer standard deviation in the X axis
+fBodyAcc.std.Y    
+   --  FFT body accelerometer standard deviation in the Y axis
+fBodyAcc.std.Z    
+   --  FFT body accelerometer standard deviation in the Z axis
+fBodyAcc.mad.X    
+   --  FFT body accelerometer median absolute deviationin the X axis
+fBodyAcc.mad.Y    
+   --  FFT body accelerometer median absolute deviationin the Y axis
+fBodyAcc.mad.Z    
+   --  FFT body accelerometer median absolute deviationin the Z axis
+fBodyAcc.max.X    
+   --  FFT body accelerometer maximum value in the X axis
+fBodyAcc.max.Y    
+   --  FFT body accelerometer maximum value in the Y axis
+fBodyAcc.max.Z    
+   --  FFT body accelerometer maximum value in the Z axis
+fBodyAcc.min.X    
+   --  FFT body accelerometer minimum value in the X axis
+fBodyAcc.min.Y    
+   --  FFT body accelerometer minimum value in the Y axis
+fBodyAcc.min.Z    
+   --  FFT body accelerometer minimum value in the Z axis
+fBodyAcc.sma      
+   --  FFT body accelerometer signal magnitude area
+fBodyAcc.energy.X     
+   --  FFT body accelerometer energy measure in the X axis
+fBodyAcc.energy.Y     
+   --  FFT body accelerometer energy measure in the Y axis
+fBodyAcc.energy.Z     
+   --  FFT body accelerometer energy measure in the Z axis
+fBodyAcc.iqr.X    
+   --  FFT body accelerometer interquartile range in the X axis
+fBodyAcc.iqr.Y    
+   --  FFT body accelerometer interquartile range in the Y axis
+fBodyAcc.iqr.Z    
+   --  FFT body accelerometer interquartile range in the Z axis
+fBodyAcc.entropy.X    
+   --  FFT body accelerometer signal entropy in the X axis
+fBodyAcc.entropy.Y    
+   --  FFT body accelerometer signal entropy in the Y axis
+fBodyAcc.entropy.Z    
+   --  FFT body accelerometer signal entropy in the Z axis
+fBodyAcc.maxInds.X    
+   --  FFT body accelerometer -maxIndsin the X axis
+fBodyAcc.maxInds.Y    
+   --  FFT body accelerometer -maxIndsin the Y axis
+fBodyAcc.maxInds.Z    
+   --  FFT body accelerometer -maxIndsin the Z axis
+fBodyAcc.meanFreq.X   
+   --  FFT body accelerometer weighted average of the frequency components in the X axis
+fBodyAcc.meanFreq.Y   
+   --  FFT body accelerometer weighted average of the frequency components in the Y axis
+fBodyAcc.meanFreq.Z   
+   --  FFT body accelerometer weighted average of the frequency components in the Z axis
+fBodyAcc.skewness.X   
+   --  FFT body accelerometer skewness of the frequency domain signal in the X axis
+fBodyAcc.kurtosis.X   
+   --  FFT body accelerometer kurtosis of the frequency domain signal in the X axis
+fBodyAcc.skewness.Y   
+   --  FFT body accelerometer skewness of the frequency domain signal in the Y axis
+fBodyAcc.kurtosis.Y   
+   --  FFT body accelerometer kurtosis of the frequency domain signal in the Y axis
+fBodyAcc.skewness.Z   
+   --  FFT body accelerometer skewness of the frequency domain signal in the Z axis
+fBodyAcc.kurtosis.Z   
+   --  FFT body accelerometer kurtosis of the frequency domain signal in the Z axis
+fBodyAcc.bandsEnergy.1.8      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -1,8
+fBodyAcc.bandsEnergy.9.16     
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -9,16
+fBodyAcc.bandsEnergy.17.24    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -17,24
+fBodyAcc.bandsEnergy.25.32    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -25,32
+fBodyAcc.bandsEnergy.33.40    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -33,40
+fBodyAcc.bandsEnergy.41.48    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -41,48
+fBodyAcc.bandsEnergy.49.56    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -49,56
+fBodyAcc.bandsEnergy.57.64    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -57,64
+fBodyAcc.bandsEnergy.1.16     
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -1,16
+fBodyAcc.bandsEnergy.17.32    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -17,32
+fBodyAcc.bandsEnergy.33.48    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -33,48
+fBodyAcc.bandsEnergy.49.64    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -49,64
+fBodyAcc.bandsEnergy.1.24     
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -1,24
+fBodyAcc.bandsEnergy.25.48    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -25,48
+fBodyAcc.bandsEnergy.1.8.1    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -1,8
+fBodyAcc.bandsEnergy.9.16.1   
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -9,16
+fBodyAcc.bandsEnergy.17.24.1      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -17,24
+fBodyAcc.bandsEnergy.25.32.1      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -25,32
+fBodyAcc.bandsEnergy.33.40.1      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -33,40
+fBodyAcc.bandsEnergy.41.48.1      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -41,48
+fBodyAcc.bandsEnergy.49.56.1      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -49,56
+fBodyAcc.bandsEnergy.57.64.1      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -57,64
+fBodyAcc.bandsEnergy.1.16.1   
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -1,16
+fBodyAcc.bandsEnergy.17.32.1      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -17,32
+fBodyAcc.bandsEnergy.33.48.1      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -33,48
+fBodyAcc.bandsEnergy.49.64.1      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -49,64
+fBodyAcc.bandsEnergy.1.24.1   
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -1,24
+fBodyAcc.bandsEnergy.25.48.1      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -25,48
+fBodyAcc.bandsEnergy.1.8.2    
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -1,8
+fBodyAcc.bandsEnergy.9.16.2   
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -9,16
+fBodyAcc.bandsEnergy.17.24.2      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -17,24
+fBodyAcc.bandsEnergy.25.32.2      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -25,32
+fBodyAcc.bandsEnergy.33.40.2      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -33,40
+fBodyAcc.bandsEnergy.41.48.2      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -41,48
+fBodyAcc.bandsEnergy.49.56.2      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -49,56
+fBodyAcc.bandsEnergy.57.64.2      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -57,64
+fBodyAcc.bandsEnergy.1.16.2   
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -1,16
+fBodyAcc.bandsEnergy.17.32.2      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -17,32
+fBodyAcc.bandsEnergy.33.48.2      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -33,48
+fBodyAcc.bandsEnergy.49.64.2      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -49,64
+fBodyAcc.bandsEnergy.1.24.2   
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -1,24
+fBodyAcc.bandsEnergy.25.48.2      
+   --  FFT body accelerometer energy of a frequency interval within 64 bins of the FFT -25,48
+fBodyAccJerk.mean.X   
+   --  FFT body accelerometer Jerkmean value in the X axis
+fBodyAccJerk.mean.Y   
+   --  FFT body accelerometer Jerkmean value in the Y axis
+fBodyAccJerk.mean.Z   
+   --  FFT body accelerometer Jerkmean value in the Z axis
+fBodyAccJerk.std.X    
+   --  FFT body accelerometer Jerkstandard deviation in the X axis
+fBodyAccJerk.std.Y    
+   --  FFT body accelerometer Jerkstandard deviation in the Y axis
+fBodyAccJerk.std.Z    
+   --  FFT body accelerometer Jerkstandard deviation in the Z axis
+fBodyAccJerk.mad.X    
+   --  FFT body accelerometer Jerkmedian absolute deviationin the X axis
+fBodyAccJerk.mad.Y    
+   --  FFT body accelerometer Jerkmedian absolute deviationin the Y axis
+fBodyAccJerk.mad.Z    
+   --  FFT body accelerometer Jerkmedian absolute deviationin the Z axis
+fBodyAccJerk.max.X    
+   --  FFT body accelerometer Jerkmaximum value in the X axis
+fBodyAccJerk.max.Y    
+   --  FFT body accelerometer Jerkmaximum value in the Y axis
+fBodyAccJerk.max.Z    
+   --  FFT body accelerometer Jerkmaximum value in the Z axis
+fBodyAccJerk.min.X    
+   --  FFT body accelerometer Jerkminimum value in the X axis
+fBodyAccJerk.min.Y    
+   --  FFT body accelerometer Jerkminimum value in the Y axis
+fBodyAccJerk.min.Z    
+   --  FFT body accelerometer Jerkminimum value in the Z axis
+fBodyAccJerk.sma      
+   --  FFT body accelerometer Jerksignal magnitude area
+fBodyAccJerk.energy.X     
+   --  FFT body accelerometer Jerkenergy measure in the X axis
+fBodyAccJerk.energy.Y     
+   --  FFT body accelerometer Jerkenergy measure in the Y axis
+fBodyAccJerk.energy.Z     
+   --  FFT body accelerometer Jerkenergy measure in the Z axis
+fBodyAccJerk.iqr.X    
+   --  FFT body accelerometer Jerkinterquartile range in the X axis
+fBodyAccJerk.iqr.Y    
+   --  FFT body accelerometer Jerkinterquartile range in the Y axis
+fBodyAccJerk.iqr.Z    
+   --  FFT body accelerometer Jerkinterquartile range in the Z axis
+fBodyAccJerk.entropy.X    
+   --  FFT body accelerometer Jerksignal entropy in the X axis
+fBodyAccJerk.entropy.Y    
+   --  FFT body accelerometer Jerksignal entropy in the Y axis
+fBodyAccJerk.entropy.Z    
+   --  FFT body accelerometer Jerksignal entropy in the Z axis
+fBodyAccJerk.maxInds.X    
+   --  FFT body accelerometer Jerk-maxIndsin the X axis
+fBodyAccJerk.maxInds.Y    
+   --  FFT body accelerometer Jerk-maxIndsin the Y axis
+fBodyAccJerk.maxInds.Z    
+   --  FFT body accelerometer Jerk-maxIndsin the Z axis
+fBodyAccJerk.meanFreq.X   
+   --  FFT body accelerometer Jerkweighted average of the frequency components in the X axis
+fBodyAccJerk.meanFreq.Y   
+   --  FFT body accelerometer Jerkweighted average of the frequency components in the Y axis
+fBodyAccJerk.meanFreq.Z   
+   --  FFT body accelerometer Jerkweighted average of the frequency components in the Z axis
+fBodyAccJerk.skewness.X   
+   --  FFT body accelerometer Jerkskewness of the frequency domain signal in the X axis
+fBodyAccJerk.kurtosis.X   
+   --  FFT body accelerometer Jerkkurtosis of the frequency domain signal in the X axis
+fBodyAccJerk.skewness.Y   
+   --  FFT body accelerometer Jerkskewness of the frequency domain signal in the Y axis
+fBodyAccJerk.kurtosis.Y   
+   --  FFT body accelerometer Jerkkurtosis of the frequency domain signal in the Y axis
+fBodyAccJerk.skewness.Z   
+   --  FFT body accelerometer Jerkskewness of the frequency domain signal in the Z axis
+fBodyAccJerk.kurtosis.Z   
+   --  FFT body accelerometer Jerkkurtosis of the frequency domain signal in the Z axis
+fBodyAccJerk.bandsEnergy.1.8      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -1,8
+fBodyAccJerk.bandsEnergy.9.16     
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -9,16
+fBodyAccJerk.bandsEnergy.17.24    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -17,24
+fBodyAccJerk.bandsEnergy.25.32    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -25,32
+fBodyAccJerk.bandsEnergy.33.40    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -33,40
+fBodyAccJerk.bandsEnergy.41.48    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -41,48
+fBodyAccJerk.bandsEnergy.49.56    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -49,56
+fBodyAccJerk.bandsEnergy.57.64    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -57,64
+fBodyAccJerk.bandsEnergy.1.16     
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -1,16
+fBodyAccJerk.bandsEnergy.17.32    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -17,32
+fBodyAccJerk.bandsEnergy.33.48    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -33,48
+fBodyAccJerk.bandsEnergy.49.64    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -49,64
+fBodyAccJerk.bandsEnergy.1.24     
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -1,24
+fBodyAccJerk.bandsEnergy.25.48    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -25,48
+fBodyAccJerk.bandsEnergy.1.8.1    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -1,8
+fBodyAccJerk.bandsEnergy.9.16.1   
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -9,16
+fBodyAccJerk.bandsEnergy.17.24.1      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -17,24
+fBodyAccJerk.bandsEnergy.25.32.1      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -25,32
+fBodyAccJerk.bandsEnergy.33.40.1      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -33,40
+fBodyAccJerk.bandsEnergy.41.48.1      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -41,48
+fBodyAccJerk.bandsEnergy.49.56.1      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -49,56
+fBodyAccJerk.bandsEnergy.57.64.1      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -57,64
+fBodyAccJerk.bandsEnergy.1.16.1   
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -1,16
+fBodyAccJerk.bandsEnergy.17.32.1      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -17,32
+fBodyAccJerk.bandsEnergy.33.48.1      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -33,48
+fBodyAccJerk.bandsEnergy.49.64.1      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -49,64
+fBodyAccJerk.bandsEnergy.1.24.1   
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -1,24
+fBodyAccJerk.bandsEnergy.25.48.1      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -25,48
+fBodyAccJerk.bandsEnergy.1.8.2    
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -1,8
+fBodyAccJerk.bandsEnergy.9.16.2   
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -9,16
+fBodyAccJerk.bandsEnergy.17.24.2      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -17,24
+fBodyAccJerk.bandsEnergy.25.32.2      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -25,32
+fBodyAccJerk.bandsEnergy.33.40.2      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -33,40
+fBodyAccJerk.bandsEnergy.41.48.2      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -41,48
+fBodyAccJerk.bandsEnergy.49.56.2      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -49,56
+fBodyAccJerk.bandsEnergy.57.64.2      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -57,64
+fBodyAccJerk.bandsEnergy.1.16.2   
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -1,16
+fBodyAccJerk.bandsEnergy.17.32.2      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -17,32
+fBodyAccJerk.bandsEnergy.33.48.2      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -33,48
+fBodyAccJerk.bandsEnergy.49.64.2      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -49,64
+fBodyAccJerk.bandsEnergy.1.24.2   
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -1,24
+fBodyAccJerk.bandsEnergy.25.48.2      
+   --  FFT body accelerometer Jerkenergy of a frequency interval within 64 bins of the FFT -25,48
+fBodyGyro.mean.X      
+   --  FFT body gyroscope mean value in the X axis
+fBodyGyro.mean.Y      
+   --  FFT body gyroscope mean value in the Y axis
+fBodyGyro.mean.Z      
+   --  FFT body gyroscope mean value in the Z axis
+fBodyGyro.std.X   
+   --  FFT body gyroscope standard deviation in the X axis
+fBodyGyro.std.Y   
+   --  FFT body gyroscope standard deviation in the Y axis
+fBodyGyro.std.Z   
+   --  FFT body gyroscope standard deviation in the Z axis
+fBodyGyro.mad.X   
+   --  FFT body gyroscope median absolute deviationin the X axis
+fBodyGyro.mad.Y   
+   --  FFT body gyroscope median absolute deviationin the Y axis
+fBodyGyro.mad.Z   
+   --  FFT body gyroscope median absolute deviationin the Z axis
+fBodyGyro.max.X   
+   --  FFT body gyroscope maximum value in the X axis
+fBodyGyro.max.Y   
+   --  FFT body gyroscope maximum value in the Y axis
+fBodyGyro.max.Z   
+   --  FFT body gyroscope maximum value in the Z axis
+fBodyGyro.min.X   
+   --  FFT body gyroscope minimum value in the X axis
+fBodyGyro.min.Y   
+   --  FFT body gyroscope minimum value in the Y axis
+fBodyGyro.min.Z   
+   --  FFT body gyroscope minimum value in the Z axis
+fBodyGyro.sma     
+   --  FFT body gyroscope signal magnitude area
+fBodyGyro.energy.X    
+   --  FFT body gyroscope energy measure in the X axis
+fBodyGyro.energy.Y    
+   --  FFT body gyroscope energy measure in the Y axis
+fBodyGyro.energy.Z    
+   --  FFT body gyroscope energy measure in the Z axis
+fBodyGyro.iqr.X   
+   --  FFT body gyroscope interquartile range in the X axis
+fBodyGyro.iqr.Y   
+   --  FFT body gyroscope interquartile range in the Y axis
+fBodyGyro.iqr.Z   
+   --  FFT body gyroscope interquartile range in the Z axis
+fBodyGyro.entropy.X   
+   --  FFT body gyroscope signal entropy in the X axis
+fBodyGyro.entropy.Y   
+   --  FFT body gyroscope signal entropy in the Y axis
+fBodyGyro.entropy.Z   
+   --  FFT body gyroscope signal entropy in the Z axis
+fBodyGyro.maxInds.X   
+   --  FFT body gyroscope -maxIndsin the X axis
+fBodyGyro.maxInds.Y   
+   --  FFT body gyroscope -maxIndsin the Y axis
+fBodyGyro.maxInds.Z   
+   --  FFT body gyroscope -maxIndsin the Z axis
+fBodyGyro.meanFreq.X      
+   --  FFT body gyroscope weighted average of the frequency components in the X axis
+fBodyGyro.meanFreq.Y      
+   --  FFT body gyroscope weighted average of the frequency components in the Y axis
+fBodyGyro.meanFreq.Z      
+   --  FFT body gyroscope weighted average of the frequency components in the Z axis
+fBodyGyro.skewness.X      
+   --  FFT body gyroscope skewness of the frequency domain signal in the X axis
+fBodyGyro.kurtosis.X      
+   --  FFT body gyroscope kurtosis of the frequency domain signal in the X axis
+fBodyGyro.skewness.Y      
+   --  FFT body gyroscope skewness of the frequency domain signal in the Y axis
+fBodyGyro.kurtosis.Y      
+   --  FFT body gyroscope kurtosis of the frequency domain signal in the Y axis
+fBodyGyro.skewness.Z      
+   --  FFT body gyroscope skewness of the frequency domain signal in the Z axis
+fBodyGyro.kurtosis.Z      
+   --  FFT body gyroscope kurtosis of the frequency domain signal in the Z axis
+fBodyGyro.bandsEnergy.1.8     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -1,8
+fBodyGyro.bandsEnergy.9.16    
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -9,16
+fBodyGyro.bandsEnergy.17.24   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -17,24
+fBodyGyro.bandsEnergy.25.32   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -25,32
+fBodyGyro.bandsEnergy.33.40   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -33,40
+fBodyGyro.bandsEnergy.41.48   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -41,48
+fBodyGyro.bandsEnergy.49.56   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -49,56
+fBodyGyro.bandsEnergy.57.64   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -57,64
+fBodyGyro.bandsEnergy.1.16    
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -1,16
+fBodyGyro.bandsEnergy.17.32   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -17,32
+fBodyGyro.bandsEnergy.33.48   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -33,48
+fBodyGyro.bandsEnergy.49.64   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -49,64
+fBodyGyro.bandsEnergy.1.24    
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -1,24
+fBodyGyro.bandsEnergy.25.48   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -25,48
+fBodyGyro.bandsEnergy.1.8.1   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -1,8
+fBodyGyro.bandsEnergy.9.16.1      
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -9,16
+fBodyGyro.bandsEnergy.17.24.1     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -17,24
+fBodyGyro.bandsEnergy.25.32.1     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -25,32
+fBodyGyro.bandsEnergy.33.40.1     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -33,40
+fBodyGyro.bandsEnergy.41.48.1     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -41,48
+fBodyGyro.bandsEnergy.49.56.1     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -49,56
+fBodyGyro.bandsEnergy.57.64.1     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -57,64
+fBodyGyro.bandsEnergy.1.16.1      
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -1,16
+fBodyGyro.bandsEnergy.17.32.1     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -17,32
+fBodyGyro.bandsEnergy.33.48.1     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -33,48
+fBodyGyro.bandsEnergy.49.64.1     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -49,64
+fBodyGyro.bandsEnergy.1.24.1      
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -1,24
+fBodyGyro.bandsEnergy.25.48.1     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -25,48
+fBodyGyro.bandsEnergy.1.8.2   
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -1,8
+fBodyGyro.bandsEnergy.9.16.2      
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -9,16
+fBodyGyro.bandsEnergy.17.24.2     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -17,24
+fBodyGyro.bandsEnergy.25.32.2     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -25,32
+fBodyGyro.bandsEnergy.33.40.2     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -33,40
+fBodyGyro.bandsEnergy.41.48.2     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -41,48
+fBodyGyro.bandsEnergy.49.56.2     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -49,56
+fBodyGyro.bandsEnergy.57.64.2     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -57,64
+fBodyGyro.bandsEnergy.1.16.2      
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -1,16
+fBodyGyro.bandsEnergy.17.32.2     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -17,32
+fBodyGyro.bandsEnergy.33.48.2     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -33,48
+fBodyGyro.bandsEnergy.49.64.2     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -49,64
+fBodyGyro.bandsEnergy.1.24.2      
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -1,24
+fBodyGyro.bandsEnergy.25.48.2     
+   --  FFT body gyroscope energy of a frequency interval within 64 bins of the FFT -25,48
+fBodyAccMag.mean      
+   --  FFT body accelerometer Magmean value 
+fBodyAccMag.std   
+   --  FFT body accelerometer Magstandard deviation 
+fBodyAccMag.mad   
+   --  FFT body accelerometer Magmedian absolute deviation
+fBodyAccMag.max   
+   --  FFT body accelerometer Magmaximum value 
+fBodyAccMag.min   
+   --  FFT body accelerometer Magminimum value 
+fBodyAccMag.sma   
+   --  FFT body accelerometer Magsignal magnitude area
+fBodyAccMag.energy    
+   --  FFT body accelerometer Magenergy measure 
+fBodyAccMag.iqr   
+   --  FFT body accelerometer Maginterquartile range 
+fBodyAccMag.entropy   
+   --  FFT body accelerometer Magsignal entropy 
+fBodyAccMag.maxInds   
+   --  FFT body accelerometer Mag-maxInds
+fBodyAccMag.meanFreq      
+   --  FFT body accelerometer Magweighted average of the frequency components 
+fBodyAccMag.skewness      
+   --  FFT body accelerometer Magskewness of the frequency domain signal 
+fBodyAccMag.kurtosis      
+   --  FFT body accelerometer Magkurtosis of the frequency domain signal 
+fBodyBodyAccJerkMag.mean      
+   --  FFT body body accelerometer JerkMagmean value 
+fBodyBodyAccJerkMag.std   
+   --  FFT body body accelerometer JerkMagstandard deviation 
+fBodyBodyAccJerkMag.mad   
+   --  FFT body body accelerometer JerkMagmedian absolute deviation
+fBodyBodyAccJerkMag.max   
+   --  FFT body body accelerometer JerkMagmaximum value 
+fBodyBodyAccJerkMag.min   
+   --  FFT body body accelerometer JerkMagminimum value 
+fBodyBodyAccJerkMag.sma   
+   --  FFT body body accelerometer JerkMagsignal magnitude area
+fBodyBodyAccJerkMag.energy    
+   --  FFT body body accelerometer JerkMagenergy measure 
+fBodyBodyAccJerkMag.iqr   
+   --  FFT body body accelerometer JerkMaginterquartile range 
+fBodyBodyAccJerkMag.entropy   
+   --  FFT body body accelerometer JerkMagsignal entropy 
+fBodyBodyAccJerkMag.maxInds   
+   --  FFT body body accelerometer JerkMag-maxInds
+fBodyBodyAccJerkMag.meanFreq      
+   --  FFT body body accelerometer JerkMagweighted average of the frequency components 
+fBodyBodyAccJerkMag.skewness      
+   --  FFT body body accelerometer JerkMagskewness of the frequency domain signal 
+fBodyBodyAccJerkMag.kurtosis      
+   --  FFT body body accelerometer JerkMagkurtosis of the frequency domain signal 
+fBodyBodyGyroMag.mean     
+   --  FFT body body gyroscope Magmean value 
+fBodyBodyGyroMag.std      
+   --  FFT body body gyroscope Magstandard deviation 
+fBodyBodyGyroMag.mad      
+   --  FFT body body gyroscope Magmedian absolute deviation
+fBodyBodyGyroMag.max      
+   --  FFT body body gyroscope Magmaximum value 
+fBodyBodyGyroMag.min      
+   --  FFT body body gyroscope Magminimum value 
+fBodyBodyGyroMag.sma      
+   --  FFT body body gyroscope Magsignal magnitude area
+fBodyBodyGyroMag.energy   
+   --  FFT body body gyroscope Magenergy measure 
+fBodyBodyGyroMag.iqr      
+   --  FFT body body gyroscope Maginterquartile range 
+fBodyBodyGyroMag.entropy      
+   --  FFT body body gyroscope Magsignal entropy 
+fBodyBodyGyroMag.maxInds      
+   --  FFT body body gyroscope Mag-maxInds
+fBodyBodyGyroMag.meanFreq     
+   --  FFT body body gyroscope Magweighted average of the frequency components 
+fBodyBodyGyroMag.skewness     
+   --  FFT body body gyroscope Magskewness of the frequency domain signal 
+fBodyBodyGyroMag.kurtosis     
+   --  FFT body body gyroscope Magkurtosis of the frequency domain signal 
+fBodyBodyGyroJerkMag.mean     
+   --  FFT body body gyroscope JerkMagmean value 
+fBodyBodyGyroJerkMag.std      
+   --  FFT body body gyroscope JerkMagstandard deviation 
+fBodyBodyGyroJerkMag.mad      
+   --  FFT body body gyroscope JerkMagmedian absolute deviation
+fBodyBodyGyroJerkMag.max      
+   --  FFT body body gyroscope JerkMagmaximum value 
+fBodyBodyGyroJerkMag.min      
+   --  FFT body body gyroscope JerkMagminimum value 
+fBodyBodyGyroJerkMag.sma      
+   --  FFT body body gyroscope JerkMagsignal magnitude area
+fBodyBodyGyroJerkMag.energy   
+   --  FFT body body gyroscope JerkMagenergy measure 
+fBodyBodyGyroJerkMag.iqr      
+   --  FFT body body gyroscope JerkMaginterquartile range 
+fBodyBodyGyroJerkMag.entropy      
+   --  FFT body body gyroscope JerkMagsignal entropy 
+fBodyBodyGyroJerkMag.maxInds      
+   --  FFT body body gyroscope JerkMag-maxInds
+fBodyBodyGyroJerkMag.meanFreq     
+   --  FFT body body gyroscope JerkMagweighted average of the frequency components 
+fBodyBodyGyroJerkMag.skewness     
+   --  FFT body body gyroscope JerkMagskewness of the frequency domain signal 
+fBodyBodyGyroJerkMag.kurtosis     
+   --  FFT body body gyroscope JerkMagkurtosis of the frequency domain signal 
+angletBodyAccMean.gravity     
+   --  angle(Time domain body accelerometer Mean,gravity)
+angletBodyAccJerkMean.gravityMean     
+   --  angle(Time domain body accelerometer JerkMean),gravityMean)
+angletBodyGyroMean.gravityMean    
+   --  angle(Time domain body gyroscope Mean,gravityMean)
+angletBodyGyroJerkMean.gravityMean    
+   --  angle(Time domain body gyroscope JerkMean,gravityMean)
+angleX.gravityMean    
+   --  angle(X,gravityMean)
+angleY.gravityMean    
+   --  angle(Y,gravityMean)
+angleZ.gravityMean    
+   --  angle(Z,gravityMean)
 
+###tidyData CodeBook
+
+These are the columns within the final data set **tidyData**. The prefix "avg." was affixed to those columns that were selected from the original data since these columns now contain averages of the original data by subject and activity.  
+
+subject    
+   Participant identifier, 1...30  
+activity    
+   Type of activity, factor with six levels, see activity_labels.txt
+subject
+activity
+avg.tBodyAcc.mean.X
+avg.tBodyAcc.mean.Y
+avg.tBodyAcc.mean.Z
+avg.tBodyAcc.std.X
+avg.tBodyAcc.std.Y
+avg.tBodyAcc.std.Z
+avg.tGravityAcc.mean.X
+avg.tGravityAcc.mean.Y
+avg.tGravityAcc.mean.Z
+avg.tGravityAcc.std.X
+avg.tGravityAcc.std.Y
+avg.tGravityAcc.std.Z
+avg.tBodyAccJerk.mean.X
+avg.tBodyAccJerk.mean.Y
+avg.tBodyAccJerk.mean.Z
+avg.tBodyAccJerk.std.X
+avg.tBodyAccJerk.std.Y
+avg.tBodyAccJerk.std.Z
+avg.tBodyGyro.mean.X
+avg.tBodyGyro.mean.Y
+avg.tBodyGyro.mean.Z
+avg.tBodyGyro.std.X
+avg.tBodyGyro.std.Y
+avg.tBodyGyro.std.Z
+avg.tBodyGyroJerk.mean.X
+avg.tBodyGyroJerk.mean.Y
+avg.tBodyGyroJerk.mean.Z
+avg.tBodyGyroJerk.std.X
+avg.tBodyGyroJerk.std.Y
+avg.tBodyGyroJerk.std.Z
+avg.tBodyAccMag.mean
+avg.tBodyAccMag.std
+avg.tGravityAccMag.mean
+avg.tGravityAccMag.std
+avg.tBodyAccJerkMag.mean
+avg.tBodyAccJerkMag.std
+avg.tBodyGyroMag.mean
+avg.tBodyGyroMag.std
+avg.tBodyGyroJerkMag.mean
+avg.tBodyGyroJerkMag.std
+avg.fBodyAcc.mean.X
+avg.fBodyAcc.mean.Y
+avg.fBodyAcc.mean.Z
+avg.fBodyAcc.std.X
+avg.fBodyAcc.std.Y
+avg.fBodyAcc.std.Z
+avg.fBodyAcc.meanFreq.X
+avg.fBodyAcc.meanFreq.Y
+avg.fBodyAcc.meanFreq.Z
+avg.fBodyAccJerk.mean.X
+avg.fBodyAccJerk.mean.Y
+avg.fBodyAccJerk.mean.Z
+avg.fBodyAccJerk.std.X
+avg.fBodyAccJerk.std.Y
+avg.fBodyAccJerk.std.Z
+avg.fBodyAccJerk.meanFreq.X
+avg.fBodyAccJerk.meanFreq.Y
+avg.fBodyAccJerk.meanFreq.Z
+avg.fBodyGyro.mean.X
+avg.fBodyGyro.mean.Y
+avg.fBodyGyro.mean.Z
+avg.fBodyGyro.std.X
+avg.fBodyGyro.std.Y
+avg.fBodyGyro.std.Z
+avg.fBodyGyro.meanFreq.X
+avg.fBodyGyro.meanFreq.Y
+avg.fBodyGyro.meanFreq.Z
+avg.fBodyAccMag.mean
+avg.fBodyAccMag.std
+avg.fBodyAccMag.meanFreq
+avg.fBodyBodyAccJerkMag.mean
+avg.fBodyBodyAccJerkMag.std
+avg.fBodyBodyAccJerkMag.meanFreq
+avg.fBodyBodyGyroMag.mean
+avg.fBodyBodyGyroMag.std
+avg.fBodyBodyGyroMag.meanFreq
+avg.fBodyBodyGyroJerkMag.mean
+avg.fBodyBodyGyroJerkMag.std
+avg.fBodyBodyGyroJerkMag.meanFreq
+avg.angletBodyAccMean.gravity
+avg.angletBodyAccJerkMean.gravityMean
+avg.angletBodyGyroMean.gravityMean
+avg.angletBodyGyroJerkMean.gravityMean
+avg.angleX.gravityMean
+avg.angleY.gravityMean
+avg.angleZ.gravityMean
+     
 
 ## Transformations
 
@@ -715,3 +1373,7 @@ This column names that had been computed were then prefixed with "avg." to indic
 
 **tidyData** was then written to a file using write.table .
 
+**tidyData** can be read using the following statement:
+'''{R}
+tidyData <- read.table(filename, header = TRUE)  
+'''
