@@ -117,7 +117,7 @@ The following comes from the features.txt document distributed with the original
 >
 >The complete list of variables of each feature vector is available in 'features.txt'
 
-The following is the contents of features.txt mentioned above.
+The following are the contents of features.txt mentioned above.
 
 >1 tBodyAcc-mean()-X
 >2 tBodyAcc-mean()-Y
