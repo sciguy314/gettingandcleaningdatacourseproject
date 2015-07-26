@@ -22,4 +22,6 @@ This column names that had been computed were then prefixed with "avg." to indic
 
 **tidyData** can be read using the following statement:
 
+```{R}
 tidyData <- read.table(filename, header = TRUE)  
+```
