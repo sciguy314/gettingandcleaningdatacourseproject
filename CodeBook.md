@@ -1263,92 +1263,178 @@ subject --
    Participant identifier, 1...30  
 activity --   
    Type of activity, factor with six levels, see activity_labels.txt
-avg.tBodyAcc.mean.X
-avg.tBodyAcc.mean.Y
-avg.tBodyAcc.mean.Z
-avg.tBodyAcc.std.X
-avg.tBodyAcc.std.Y
-avg.tBodyAcc.std.Z
-avg.tGravityAcc.mean.X
-avg.tGravityAcc.mean.Y
-avg.tGravityAcc.mean.Z
-avg.tGravityAcc.std.X
-avg.tGravityAcc.std.Y
-avg.tGravityAcc.std.Z
-avg.tBodyAccJerk.mean.X
-avg.tBodyAccJerk.mean.Y
-avg.tBodyAccJerk.mean.Z
-avg.tBodyAccJerk.std.X
-avg.tBodyAccJerk.std.Y
-avg.tBodyAccJerk.std.Z
-avg.tBodyGyro.mean.X
-avg.tBodyGyro.mean.Y
-avg.tBodyGyro.mean.Z
-avg.tBodyGyro.std.X
-avg.tBodyGyro.std.Y
-avg.tBodyGyro.std.Z
-avg.tBodyGyroJerk.mean.X
-avg.tBodyGyroJerk.mean.Y
-avg.tBodyGyroJerk.mean.Z
-avg.tBodyGyroJerk.std.X
-avg.tBodyGyroJerk.std.Y
-avg.tBodyGyroJerk.std.Z
-avg.tBodyAccMag.mean
-avg.tBodyAccMag.std
-avg.tGravityAccMag.mean
-avg.tGravityAccMag.std
-avg.tBodyAccJerkMag.mean
-avg.tBodyAccJerkMag.std
-avg.tBodyGyroMag.mean
-avg.tBodyGyroMag.std
-avg.tBodyGyroJerkMag.mean
-avg.tBodyGyroJerkMag.std
-avg.fBodyAcc.mean.X
-avg.fBodyAcc.mean.Y
-avg.fBodyAcc.mean.Z
-avg.fBodyAcc.std.X
-avg.fBodyAcc.std.Y
-avg.fBodyAcc.std.Z
-avg.fBodyAcc.meanFreq.X
-avg.fBodyAcc.meanFreq.Y
-avg.fBodyAcc.meanFreq.Z
-avg.fBodyAccJerk.mean.X
-avg.fBodyAccJerk.mean.Y
-avg.fBodyAccJerk.mean.Z
-avg.fBodyAccJerk.std.X
-avg.fBodyAccJerk.std.Y
-avg.fBodyAccJerk.std.Z
-avg.fBodyAccJerk.meanFreq.X
-avg.fBodyAccJerk.meanFreq.Y
-avg.fBodyAccJerk.meanFreq.Z
-avg.fBodyGyro.mean.X
-avg.fBodyGyro.mean.Y
-avg.fBodyGyro.mean.Z
-avg.fBodyGyro.std.X
-avg.fBodyGyro.std.Y
-avg.fBodyGyro.std.Z
-avg.fBodyGyro.meanFreq.X
-avg.fBodyGyro.meanFreq.Y
-avg.fBodyGyro.meanFreq.Z
-avg.fBodyAccMag.mean
-avg.fBodyAccMag.std
-avg.fBodyAccMag.meanFreq
-avg.fBodyBodyAccJerkMag.mean
-avg.fBodyBodyAccJerkMag.std
-avg.fBodyBodyAccJerkMag.meanFreq
-avg.fBodyBodyGyroMag.mean
-avg.fBodyBodyGyroMag.std
-avg.fBodyBodyGyroMag.meanFreq
-avg.fBodyBodyGyroJerkMag.mean
-avg.fBodyBodyGyroJerkMag.std
-avg.fBodyBodyGyroJerkMag.meanFreq
-avg.angletBodyAccMean.gravity
-avg.angletBodyAccJerkMean.gravityMean
-avg.angletBodyGyroMean.gravityMean
-avg.angletBodyGyroJerkMean.gravityMean
-avg.angleX.gravityMean
-avg.angleY.gravityMean
-avg.angleZ.gravityMean
+avg.tBodyAcc.mean.X --  
+  Average of time domain body accelerometer mean in the X axis  
+avg.tBodyAcc.mean.Y --  
+  Average of time domain body accelerometer mean in the Y axis  
+avg.tBodyAcc.mean.Z --  
+  Average of time domain body accelerometer mean in the z axis  
+avg.tBodyAcc.std.X  --  
+  Average of time domain body accelerometer .std.X
+avg.tBodyAcc.std.Y  --  
+  Average of time domain body accelerometer .std.Y
+avg.tBodyAcc.std.Z  --  
+  Average of time domain body accelerometer .std.Z
+avg.tGravityAcc.mean.X  --  
+  Average of time domain gravity accelerometer mean in the X axis  
+avg.tGravityAcc.mean.Y  --  
+  Average of time domain gravity accelerometer mean in the Y axis  
+avg.tGravityAcc.mean.Z  --  
+  Average of time domain gravity accelerometer mean in the z axis  
+avg.tGravityAcc.std.X   --  
+  Average of time domain gravity accelerometer .std.X
+avg.tGravityAcc.std.Y   --  
+  Average of time domain gravity accelerometer .std.Y
+avg.tGravityAcc.std.Z   --  
+  Average of time domain gravity accelerometer .std.Z
+avg.tBodyAccJerk.mean.X --  
+  Average of time domain body accelerometer Jerkmean in the X axis  
+avg.tBodyAccJerk.mean.Y --  
+  Average of time domain body accelerometer Jerkmean in the Y axis  
+avg.tBodyAccJerk.mean.Z --  
+  Average of time domain body accelerometer Jerkmean in the z axis  
+avg.tBodyAccJerk.std.X  --  
+  Average of time domain body accelerometer Jerk.std.X
+avg.tBodyAccJerk.std.Y  --  
+  Average of time domain body accelerometer Jerk.std.Y
+avg.tBodyAccJerk.std.Z  --  
+  Average of time domain body accelerometer Jerk.std.Z
+avg.tBodyGyro.mean.X    --  
+  Average of time domain body gyroscope mean in the X axis  
+avg.tBodyGyro.mean.Y    --  
+  Average of time domain body gyroscope mean in the Y axis  
+avg.tBodyGyro.mean.Z    --  
+  Average of time domain body gyroscope mean in the z axis  
+avg.tBodyGyro.std.X --  
+  Average of time domain body gyroscope .std.X
+avg.tBodyGyro.std.Y --  
+  Average of time domain body gyroscope .std.Y
+avg.tBodyGyro.std.Z --  
+  Average of time domain body gyroscope .std.Z
+avg.tBodyGyroJerk.mean.X    --  
+  Average of time domain body gyroscope Jerkmean in the X axis  
+avg.tBodyGyroJerk.mean.Y    --  
+  Average of time domain body gyroscope Jerkmean in the Y axis  
+avg.tBodyGyroJerk.mean.Z    --  
+  Average of time domain body gyroscope Jerkmean in the z axis  
+avg.tBodyGyroJerk.std.X --  
+  Average of time domain body gyroscope Jerk.std.X
+avg.tBodyGyroJerk.std.Y --  
+  Average of time domain body gyroscope Jerk.std.Y
+avg.tBodyGyroJerk.std.Z --  
+  Average of time domain body gyroscope Jerk.std.Z
+avg.tBodyAccMag.mean    --  
+  Average of time domain body accelerometer Mag.mean
+avg.tBodyAccMag.std --  
+  Average of time domain body accelerometer Mag.std
+avg.tGravityAccMag.mean --  
+  Average of time domain gravity accelerometer Mag.mean
+avg.tGravityAccMag.std  --  
+  Average of time domain gravity accelerometer Mag.std
+avg.tBodyAccJerkMag.mean    --  
+  Average of time domain body accelerometer JerkMag.mean
+avg.tBodyAccJerkMag.std --  
+  Average of time domain body accelerometer JerkMag.std
+avg.tBodyGyroMag.mean   --  
+  Average of time domain body gyroscope Mag.mean
+avg.tBodyGyroMag.std    --  
+  Average of time domain body gyroscope Mag.std
+avg.tBodyGyroJerkMag.mean   --  
+  Average of time domain body gyroscope JerkMag.mean
+avg.tBodyGyroJerkMag.std    --  
+  Average of time domain body gyroscope JerkMag.std
+avg.fBodyAcc.mean.X --  
+  Average of .fBodyAccmean in the X axis  
+avg.fBodyAcc.mean.Y --  
+  Average of .fBodyAccmean in the Y axis  
+avg.fBodyAcc.mean.Z --  
+  Average of .fBodyAccmean in the z axis  
+avg.fBodyAcc.std.X  --  
+  Average of .fBodyAcc.std.X
+avg.fBodyAcc.std.Y  --  
+  Average of .fBodyAcc.std.Y
+avg.fBodyAcc.std.Z  --  
+  Average of .fBodyAcc.std.Z
+avg.fBodyAcc.meanFreq.X --  
+  Average of .fBodyAcc.meanFreq.X
+avg.fBodyAcc.meanFreq.Y --  
+  Average of .fBodyAcc.meanFreq.Y
+avg.fBodyAcc.meanFreq.Z --  
+  Average of .fBodyAcc.meanFreq.Z
+avg.fBodyAccJerk.mean.X --  
+  Average of .fBodyAccJerkmean in the X axis  
+avg.fBodyAccJerk.mean.Y --  
+  Average of .fBodyAccJerkmean in the Y axis  
+avg.fBodyAccJerk.mean.Z --  
+  Average of .fBodyAccJerkmean in the z axis  
+avg.fBodyAccJerk.std.X  --  
+  Average of .fBodyAccJerk.std.X
+avg.fBodyAccJerk.std.Y  --  
+  Average of .fBodyAccJerk.std.Y
+avg.fBodyAccJerk.std.Z  --  
+  Average of .fBodyAccJerk.std.Z
+avg.fBodyAccJerk.meanFreq.X --  
+  Average of .fBodyAccJerk.meanFreq.X
+avg.fBodyAccJerk.meanFreq.Y --  
+  Average of .fBodyAccJerk.meanFreq.Y
+avg.fBodyAccJerk.meanFreq.Z --  
+  Average of .fBodyAccJerk.meanFreq.Z
+avg.fBodyGyro.mean.X    --  
+  Average of .fBodyGyromean in the X axis  
+avg.fBodyGyro.mean.Y    --  
+  Average of .fBodyGyromean in the Y axis  
+avg.fBodyGyro.mean.Z    --  
+  Average of .fBodyGyromean in the z axis  
+avg.fBodyGyro.std.X --  
+  Average of .fBodyGyro.std.X
+avg.fBodyGyro.std.Y --  
+  Average of .fBodyGyro.std.Y
+avg.fBodyGyro.std.Z --  
+  Average of .fBodyGyro.std.Z
+avg.fBodyGyro.meanFreq.X    --  
+  Average of .fBodyGyro.meanFreq.X
+avg.fBodyGyro.meanFreq.Y    --  
+  Average of .fBodyGyro.meanFreq.Y
+avg.fBodyGyro.meanFreq.Z    --  
+  Average of .fBodyGyro.meanFreq.Z
+avg.fBodyAccMag.mean    --  
+  Average of .fBodyAccMag.mean
+avg.fBodyAccMag.std --  
+  Average of .fBodyAccMag.std
+avg.fBodyAccMag.meanFreq    --  
+  Average of .fBodyAccMag.meanFreq
+avg.fBodyBodyAccJerkMag.mean    --  
+  Average of .fBodyBodyAccJerkMag.mean
+avg.fBodyBodyAccJerkMag.std --  
+  Average of .fBodyBodyAccJerkMag.std
+avg.fBodyBodyAccJerkMag.meanFreq    --  
+  Average of .fBodyBodyAccJerkMag.meanFreq
+avg.fBodyBodyGyroMag.mean   --  
+  Average of .fBodyBodyGyroMag.mean
+avg.fBodyBodyGyroMag.std    --  
+  Average of .fBodyBodyGyroMag.std
+avg.fBodyBodyGyroMag.meanFreq   --  
+  Average of .fBodyBodyGyroMag.meanFreq
+avg.fBodyBodyGyroJerkMag.mean   --  
+  Average of .fBodyBodyGyroJerkMag.mean
+avg.fBodyBodyGyroJerkMag.std    --  
+  Average of .fBodyBodyGyroJerkMag.std
+avg.fBodyBodyGyroJerkMag.meanFreq   --  
+  Average of .fBodyBodyGyroJerkMag.meanFreq
+avg.angletBodyAccMean.gravity   --  
+  Average of .angltime domain body accelerometer Mean.gravity
+avg.angletBodyAccJerkMean.gravityMean   --  
+  Average of .angltime domain body accelerometer JerkMean.gravityMean
+avg.angletBodyGyroMean.gravityMean  --  
+  Average of .angltime domain body gyroscope Mean.gravityMean
+avg.angletBodyGyroJerkMean.gravityMean  --  
+  Average of .angltime domain body gyroscope JerkMean.gravityMean
+avg.angleX.gravityMean  --  
+  Average of .angleX.gravityMean
+avg.angleY.gravityMean  --  
+  Average of .angleY.gravityMean
+avg.angleZ.gravityMean  --  
+  Average of .angleZ.gravityMean
      
 
 ## Transformations
