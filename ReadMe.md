@@ -19,3 +19,8 @@ A select command was then used to extract columns of interest, which were **subj
 This column names that had been computed were then prefixed with "avg." to indicate that the information represented the mean of the original data.
 
 **tidyData** was then written to a file using write.table .
+
+**tidyData** can be read using the following statement:
+'''{R}
+tidyData <- read.table(filename, header = TRUE)  
+'''
